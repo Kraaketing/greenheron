@@ -5,11 +5,10 @@
   <title>{{ title }}</title>
   <link rel="stylesheet" href="/css/styles.css">
 </head>
-<body>
-<section class="main-container">
+<body{% if background %} class="{{ background }}"{% endif %}>
+<div class="main-container">
   {% include "components/header.njk" %}
   <main>
-
     {% if body %}
       <div class="main-content">
         {{ body | safe }}
@@ -23,15 +22,17 @@
         
         {% elif block.type == "blaane" %}
           {% include "components/blaane.njk" %}
+
+        {% elif block.type == "intro" %}
+          {% include "components/intro.njk" %}
         
         {% elif block.type == "testing_block" %}
           {% include "components/testing-block.njk" %}
         {% endif %}
       {% endfor %}
     {% endif %}
-
   </main>
-</section>
+</div>
   {% include "components/footer.njk" %}
 </body>
 </html>

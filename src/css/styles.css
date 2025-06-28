@@ -11,6 +11,7 @@
   /* background: transparent; */
   font-family: Arial, "Trebuchet MS";
   scroll-behavior: smooth;
+  text-wrap: balance;
 }
 
 a {
@@ -18,11 +19,52 @@ a {
 }
 /* h1 {
   font-family: kalnia;
-} */
+  } */
 
 /* COMPOSITION */
+body {
+  height: 100vh;
+  width: 100dvw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+}
+
+.standard {
+  align-self: center;
+  width: min(90%, 60rem);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.twelve-grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 3rem;
+  margin-bottom: 5rem;
+  justify-items: center;
+  /* .one-part {} */
+  /* .three-part {} */
+}
+
+.two-part > :first-child {
+  grid-column: 1 / span 5;
+}
+.two-part > :last-child {
+  grid-column: 6 / span 6;
+  height: 100%;
+}
+
 /* UTILITIES */
 :root {
+  --green: oklch(0.661 0.1708 174.11);
+  --green-dark: oklch(0.5322 0.1371 174.11);
   --orange: oklch(0.706 0.2372 42.84);
   --orange-bright: oklch(0.7867 0.1741 50.56);
   --pink: oklch(0.7054 0.2562 3.43);
@@ -40,6 +82,23 @@ a {
   user-select: none;
 }
 
+.round-image {
+  border-radius: 50%;
+  width: min(25rem,60%);
+  height: auto;
+  filter: drop-shadow(-1rem 1.5rem 0 var(--orange));
+
+}
+
+/* uneven image container */
+.blob {
+  background-size: 100%;
+  border-radius: 80% 20% 32% 68% / 58% 22% 78% 42%;
+  height: 400px;
+  width: 400px;
+  background-image: url;
+}
+
 /* BLOCKS */
 /* Header */
 header {
@@ -49,8 +108,8 @@ header {
 
 header > a {
   margin: 1rem 3%;
-      color:var(--orange);
-text-decoration: none;
+  color: var(--orange);
+  text-decoration: none;
 }
 
 /* Hero */
@@ -59,16 +118,15 @@ text-decoration: none;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: calc(100vh - 3rem);
+  height: calc(100vh - 3rem - 8rem);
   text-align: center;
-  text-wrap: balance;
   svg {
     margin-top: -10rem;
-    /* fill: rgb(255, 109, 36); */
+    margin-bottom: min(6%, 1rem);
     fill: oklch(0.706 0.2372 42.84);
     width: min(60%, 29rem);
     filter: drop-shadow(0 1.5rem 1rem var(--shadow));
-      transition: transform .9s;
+    transition: transform 0.9s;
   }
   svg:hover {
     transform: scale(1.1);
@@ -76,6 +134,7 @@ text-decoration: none;
   h1 {
     font-size: max(3rem, 8vw);
     letter-spacing: -0.04em;
+    line-height: 1.2em;
     /* letter-spacing: -0.14em; */
     /* padding-right: 0.1em; */
     /* color: var(--blue-dark); */
@@ -84,30 +143,60 @@ text-decoration: none;
     background-clip: text;
     color: transparent;
     filter: drop-shadow(0 0 1rem var(--shadow) inset);
-    
   }
   p {
     font-size: max(1rem, 2vw);
     letter-spacing: -0.04em;
     /* color:var(--pink); */
-        background: linear-gradient(175deg, var(--orange) 40%, var(--pink) 100%);
+    background: linear-gradient(175deg, var(--orange) 40%, var(--pink) 100%);
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
-        margin-top: -2vw;
+  }
+}
+@media (min-width: 48rem) {
+  .hero-container > h1 {
+    margin-bottom: -0.2em;
   }
 }
 
-body {
-  /* min-height: 100vh; */
-  /* width: 100%; */
-  height: 100vh;
-  /* width: 100vw; */
+/* Can't remember where this is from. delete */
+/* .container {
+  padding-top: 2rem;
+  width: 100%;
+  flex-grow: 1;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  /* align-items: center; */
-  /* ROTATING BACKGROUND */
+  justify-content: center;
+  align-items: center;
+} */
+
+.intro {
+  padding-top: 8rem;
+  margin-bottom: 6rem;
+}
+
+.card {
+  background-color: white;
+  border-radius: 3rem;
+  filter: drop-shadow(0 1.5rem 1rem var(--orange));
+  width: 100%;
+  height: 100%;
+  /* just to give some height when testing */
+  p {
+    margin: 2rem;
+  }
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem 0;
+  color: var(--pink);
+}
+
+.green-cloud {
   background: linear-gradient(
       217deg,
       oklch(0.9517 0.0855 144.87 / 70%),
@@ -130,10 +219,10 @@ body {
     );
   background-size: 200% 200%;
   background-attachment: fixed;
-  animation: gradient 30s ease infinite;
+  animation: gradientcloud-gradient 30s ease infinite;
 }
 
-@keyframes gradient {
+@keyframes gradientcloud-gradient {
   0% {
     background-position: 0% 50%;
   }
@@ -152,33 +241,4 @@ body {
   100% {
     background-position: 0% 50%;
   }
-}
-
-.container {
-  padding-top: 2rem;
-  width: 100%;
-  flex-grow: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.floatingBox {
-  background-color: white;
-  border-radius: 20px;
-  width: 80%;
-  max-width: 55rem;
-}
-
-.river {
-  width: 100%;
-  background-color: white;
-}
-
-footer {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 2rem 0;
 }
