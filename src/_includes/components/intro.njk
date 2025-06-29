@@ -1,16 +1,12 @@
 <section id="intro" class="standard-container | intro">
-    <div class="__six-grid">
-        <div>
-            {% include "svg/four-d-bean.njk" %}
-        </div>
-        {% for card in block.cards %}
-        <div class="card">
-            <h3>{{ card.title }}</h3>
-            <p>{{ card.content | safe }}</p>
-        </div>
-        {% endfor %}
+  <div class="__six-grid">
+    <div>{% include "svg/four-d-bean.njk" %}</div>
+    {% for card in block.cards %}
+    <div class="card">
+      <h3>{{ card.title }}</h3>
+      <p>{{ card.content | safe }}</p>
     </div>
-    <div class="bean-container">
-        {% include "svg/four-d-bean.njk" %}
-    </div>
+    {% endfor %}
+  </div>
+  <div class="bean-container">{% include "svg/four-d-bean.njk" %}</div>
 </section>

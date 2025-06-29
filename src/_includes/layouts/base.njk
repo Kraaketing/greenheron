@@ -2,13 +2,14 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
   <title>{{ title }}</title>
   <link rel="stylesheet" href="/styles.css">
 </head>
-<body{% if background %} class="{{ background }}"{% endif %}>
+<body class="push-footer | green-cloud">
 <div class="main-container">
   {% include "components/header.njk" %}
-  <main>
+  <main class="flex-col">
     {% if body %}
       <div class="main-content">
         {{ body | safe }}

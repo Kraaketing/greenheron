@@ -2,7 +2,6 @@
 title: 'Green Heron'
 layout: 'layouts/base.njk'
 permalink: /
-background: "green-cloud"
 blocks:
  - type: hero
  - type: intro

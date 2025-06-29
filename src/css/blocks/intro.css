@@ -13,12 +13,11 @@
     }
     .card {
       padding: 2rem 3% 3rem;
-            margin: 3rem 0;
-
+      margin: 3rem 0;
       background-color: var(--pink-white);
       border-radius: 3rem;
       box-shadow: 0.3rem 0.7rem 0.4rem var(--green-dark-shadow),
-      -0.1rem -0.1rem 0.2rem white;
+        -0.1rem -0.1rem 0.2rem white;
       h3 {
         text-align: center;
         color: var(--green-dark);
@@ -40,7 +39,6 @@
     .card {
       margin: 0;
       padding: 2rem 2rem 3rem;
-
     }
     div:nth-child(1) {
       grid-column: 1 / 3;

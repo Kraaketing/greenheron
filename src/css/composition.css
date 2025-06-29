@@ -1,6 +1,6 @@
 
 /* COMPOSITION */
-body {
+.push-footer {
   height: 100vh;
   width: 100dvw;
   display: flex;
@@ -8,7 +8,7 @@ body {
   justify-content: space-between;
 }
 
-main {
+.flex-col {
   display: flex;
   flex-direction: column;
 }
