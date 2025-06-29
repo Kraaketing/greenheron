@@ -19,6 +19,6 @@ blocks:
        content: "Text goes here. More text to test the container width behaviour <br> Line breaks <br> like this"
      - title: "Community-driven technologies"
        content: "Text goes here. More text to test the container width behaviour. More text to test the container width behaviour. More text to test the container width behaviour. More text to test the container width behaviour. <br> Line breaks <br> like this"
- - type: blaane
+ - type: mountainwave
  - type: testing_block
 ---

@@ -1,0 +1,12 @@
+/* BLOCKS */
+
+/* Header */
+header {
+  display: flex;
+  justify-content: space-between;
+  a {
+    margin: 1rem 3%;
+    color: var(--orange);
+    text-decoration: none;
+  }
+}

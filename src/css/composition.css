@@ -1,0 +1,22 @@
+
+/* COMPOSITION */
+body {
+  height: 100vh;
+  width: 100dvw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+}
+
+.standard-container {
+  align-self: center;
+  width: min(95%, 80rem);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
