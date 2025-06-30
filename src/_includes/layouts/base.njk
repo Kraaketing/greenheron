@@ -9,13 +9,7 @@
 <body class="push-footer | green-cloud">
 <div class="main-container">
   {% include "components/header.njk" %}
-  <main class="flex-col">
-    {% if body %}
-      <div class="main-content">
-        {{ body | safe }}
-      </div>
-    {% endif %}
-    
+  <main class="standard-container">
     {% if blocks %}
       {% for block in blocks %}
         {% if block.type == "hero" %}

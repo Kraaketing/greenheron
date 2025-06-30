@@ -6,6 +6,7 @@
   align-items: center;
   /* full vh minus header and margin of next element: */
   height: calc(100vh - 3rem - 8rem);
+  width:100%;
   text-align: center;
   a {
     margin-top: -10rem;
