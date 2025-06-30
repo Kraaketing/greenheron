@@ -9,4 +9,7 @@ header {
     color: var(--orange);
     text-decoration: none;
   }
+  a:nth-child(2) {
+    color: var(--pink);
+  }
 }

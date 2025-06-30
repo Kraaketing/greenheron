@@ -11,7 +11,7 @@
       margin-bottom: 5rem;
       justify-content: center;
     }
-    .card {
+    /* .card {
       padding: 2rem 3% 3rem;
       margin: 3rem 0;
       background-color: var(--pink-white);
@@ -23,7 +23,7 @@
         color: var(--green-dark);
         font-size: larger;
       }
-    }
+    } */
   }
   .bean-container {
     width: min(60%, 16rem);

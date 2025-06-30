@@ -20,12 +20,12 @@
       {% for block in blocks %}
         {% if block.type == "hero" %}
           {% include "components/hero.njk" %}
-        
-        {% elif block.type == "mountainwave" %}
-          {% include "components/mountainwave.njk" %}
-
-        {% elif block.type == "intro" %}
+          
+          {% elif block.type == "intro" %}
           {% include "components/intro.njk" %}
+          
+          {% elif block.type == "mountainwave" %}
+            {% include "components/mountainwave.njk" %}
         
         {% elif block.type == "testing_block" %}
           {% include "components/testing-block.njk" %}

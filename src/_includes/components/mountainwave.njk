@@ -1,7 +1,27 @@
-<section>
+<section id="offer">
   {% include "svg/blaane.njk" %}
-  <div style="background-color: oklch(0.5322 0.1371 174.11); height: 80rem">
-    <h2>Funding client offer</h2>
+  <div class="grass">
+  <div class="standard-container container-width-wide">
+    <h2>Founding client offer</h2>
+    <p>
+      As it is early days for Green Heron, I am holding an opening offer for new
+      clients. Huzzah!
+    </p>
+    <a href="/contact" class="card offer">
+      <h2>€</h2>
+      <h3>650</h3>
+      <ul>
+        <li>Custom designed website with up to two design iterations</li>
+        <li>1-5 pages</li>
+        <li>Headless external CMS</li>
+        <li>Developed with sustanability in mind spaces</li>
+      </ul>
+    </a >
+    {% for card in block.cards %} 
+      {% set cardStyle = "offer" %}
+      {% include "components/card.njk" %} 
+    {% endfor%}
+  </div>
   </div>
   {% include "svg/bottom-wave.njk" %}
 </section>

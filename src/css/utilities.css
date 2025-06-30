@@ -8,6 +8,7 @@
   --orange-white: oklch(0.9859 0.0288 42.84);
   --pink: oklch(0.7054 0.2562 3.43);
   --pink-white: oklch(0.99 0.01 5.61);
+  --pink-white--glow: oklch(0.99 0.01 5.61 / 40%);
   --shadow: oklch(0.4669 0.2072 30.44 /40%);
   --pink-gradient: linear-gradient(
     0deg,

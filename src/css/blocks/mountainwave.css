@@ -1,11 +1,21 @@
-h2 {
-  /* margin-bottom: 0; */
-  font-size: max(3rem, 6vw);
-  /* letter-spacing: -0.04em; */
-  line-height: 1.2em;
-  background: linear-gradient(175deg, var(--orange) 40%, var(--pink) 100%);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-  /* compensation for blaane component negative bottom margin: */
+.grass {
+    display: flex;
+    justify-content: center;
+  background: linear-gradient(var(--green-dark),var(--green));
+  height: 80rem;
+  h2 {
+    padding-top: 1em;
+    font-size: max(3rem, 6vw);
+    letter-spacing: -0.04em;
+    line-height: 1.2em;
+    background: linear-gradient(175deg, var(--orange) 40%, var(--pink) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    text-align: center;
+    filter: drop-shadow(-0.02em 0.02em 0 var(--orange-white)) drop-shadow(0 0 2rem var(--green));
+  }
+  p {
+    color: var(--pink-white);
+  }
 }

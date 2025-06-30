@@ -13,8 +13,9 @@
     fill: oklch(0.706 0.2372 42.84);
     width: min(60%, 29rem);
     filter: drop-shadow(0 1.5rem 1rem var(--shadow));
-    svg {transition: transform 0.9s;
-  }
+    svg {
+      transition: transform 0.9s;
+    }
   }
   svg:hover {
     transform: scale(1.1);
