@@ -20,6 +20,12 @@
           
           {% elif block.type == "mountainwave" %}
             {% include "components/mountainwave.njk" %}
+
+          {% elif block.type == "testimonials" %}
+            {% include "components/testimonials.njk" %}
+
+          {% elif block.type == "contact-block" %}
+            {% include "components/contact-block.njk" %}
         
         {% elif block.type == "testing_block" %}
           {% include "components/testing-block.njk" %}

@@ -19,5 +19,5 @@ blocks:
      - title: "Community-driven technologies"
        content: "Text goes here. More text to test the container width behaviour. More text to test the container width behaviour. More text to test the container width behaviour. More text to test the container width behaviour. <br> Line breaks <br> like this"
  - type: mountainwave
- - type: testing_block
+ - type: testimonials
 ---
