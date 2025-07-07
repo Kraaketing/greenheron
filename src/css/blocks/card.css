@@ -23,8 +23,7 @@
   cursor: pointer;
   transition: transform 0.9s;
   text-decoration: none;
-    box-shadow: 0.3rem 0.7rem 0 var(--green-dark-shadow),
-    -0.1rem -0.1rem 0 white;
+  box-shadow: 0.3rem 0.7rem 0 var(--green-dark-shadow), -0.1rem -0.1rem 0 white;
   .price {
     width: 100%;
     display: flex;
@@ -36,11 +35,10 @@
     color: var(--orange);
     font-size: 2rem;
     text-align: center;
-
   }
   h4 {
     display: inline-block;
-    font-size: max(3rem, 11vw);
+    font-size: clamp(7rem, 11vw, 13rem);
     letter-spacing: -0.04em;
     background: linear-gradient(175deg, var(--orange) 40%, var(--pink) 100%);
     -webkit-background-clip: text;
@@ -50,7 +48,7 @@
     margin-bottom: 0;
   }
   h4:first-child {
-    font-size: max(2rem, 8vw);
+    font-size: clamp(5rem, 8vw, 10rem);
   }
   ul {
     list-style-position: inside;
@@ -66,7 +64,7 @@
 }
 
 .quote-card {
-h3 {
-  padding-left: 1rem;
-}
+  h3 {
+    padding-left: 1rem;
+  }
 }

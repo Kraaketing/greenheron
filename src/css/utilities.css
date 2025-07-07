@@ -17,6 +17,14 @@
   );
 }
 
+.pink-text {
+  color: var(--pink);
+}
+
+.orange-text {
+  color: var(--orange);
+}
+
 .unselectable {
   -webkit-user-select: none;
   -ms-user-select: none;
@@ -54,7 +62,7 @@
       oklch(0.8867 0.2617 143.28) 1%,
       oklch(0.9517 0.0855 144.87 / 0%) 27%
     );
-  background-size: 200% 200%;
+  background-size: 300% 300%;
   background-attachment: fixed;
   animation: gradientcloud-gradient 30s ease infinite;
 }
