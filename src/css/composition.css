@@ -17,3 +17,7 @@
 .container-width-wide {
   width: min(95%, 80rem);
 }
+
+.twelve-grid {
+  display: grid;
+}

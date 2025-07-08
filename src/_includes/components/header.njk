@@ -1,5 +1,13 @@
 <header class="unselectable">
- <a href="/">green heron</a>
- <a href="#offer">founding client offer</a>
- <a href="/contact">contact</a>
+  {% if page.url == "/" %}
+    <span class="current-page" aria-current="page">green heron</span>
+  {% else %}
+    <a href="/">green heron</a>
+  {% endif %}
+  
+  {% if page.url == "/contact.html" %}
+    <span class="current-page" aria-current="page">contact</span>
+  {% else %}
+    <a href="/contact">contact</a>
+  {% endif %}
 </header>

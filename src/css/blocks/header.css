@@ -4,12 +4,12 @@
 header {
   display: flex;
   justify-content: space-between;
-  a {
+  a, span {
     margin: 1rem 3%;
     color: var(--orange);
     text-decoration: none;
   }
-  a:nth-child(2) {
+  /* a:nth-child(2) {
     color: var(--pink);
-  }
+  } */
 }
