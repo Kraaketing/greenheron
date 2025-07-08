@@ -6,7 +6,11 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  div:first-child {
+    flex-grow: 1;
+  }
 }
+
 
 .standard-container {
   display: flex;
@@ -14,8 +18,24 @@
   align-items: center;
 }
 
+.height-flex-grow {
+  flex-grow: 1;
+}
+
+.full-height {
+  height: min(100%);
+}
+
+.container-width-full {
+  width: 100%;
+}
+
 .container-width-wide {
   width: min(95%, 80rem);
+}
+.center {
+  align-content: center;
+  height: 100%;
 }
 
 .twelve-grid {

@@ -2,8 +2,8 @@
 .hero-container {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
   /* full vh minus header and margin of next element: */
   height: calc(100vh - 3rem - 8rem);
   width:100%;
@@ -32,7 +32,7 @@
     color: transparent;
     filter: drop-shadow(0 0 1rem var(--shadow) inset);
   }
-  p {
+  span {
     font-size: max(1rem, 2vw);
     letter-spacing: -0.04em;
     /* color:var(--pink); */

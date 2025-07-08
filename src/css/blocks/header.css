@@ -6,8 +6,15 @@ header {
   justify-content: space-between;
   a, span {
     margin: 1rem 3%;
-    color: var(--orange);
     text-decoration: none;
+  }
+  span {
+    color: var(--orange);
+    
+  }
+  a {
+    color: var(--pink);
+    font-weight: bold;
   }
   /* a:nth-child(2) {
     color: var(--pink);

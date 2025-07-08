@@ -1,7 +1,11 @@
+
+
 input {
     border: 2px solid var(--orange);
     border-radius: 5rem;
 }
+
+
 
 input[type="submit"] {
     background-color: var(--orange);
