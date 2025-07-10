@@ -17,7 +17,7 @@ blocks:
      - title: "Green hosting"
        content: "Text goes here. More text to test the container width behaviour <br> Line breaks <br> like this"
      - title: "Community-driven technologies"
-       content: "Text goes here. More text to test the container width behaviour. More text to test the container width behaviour. More text to test the container width behaviour. More text to test the container width behaviour. <br> Line breaks <br> like this this"
+       content: "Text goes here. More text to test the container width behaviour. More text to test the container width behaviour. More text to test the container width behaviour. More text to test the container width behaviour. <br> Line breaks <br><br> like this this"
  - type: mountainwave
  - type: testimonials
 ---

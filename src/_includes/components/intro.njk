@@ -1,10 +1,12 @@
 <section id="intro" class="standard-container container-width-wide | intro">
   <div class="__six-grid">
-    <div>{% include "svg/four-d-bean.njk" %}</div>
+    <figure>
+    {% include "svg/four-d-bean.njk" %}
+    </figure>
         {% for card in block.cards %}
             {% set cardStyle = "intro-card" %}
             {% include "components/card.njk" %}
         {% endfor %}
   </div>
-  <div class="bean-container">{% include "svg/four-d-bean.njk" %}</div>
+  <figure class="bean-container">{% include "svg/four-d-bean.njk" %}</figure>
 </section>

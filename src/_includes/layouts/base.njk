@@ -15,6 +15,14 @@
     <div class="standard-container container-width-full">
       {% include "components/header.njk" %}
       <main class="standard-container height-flex-grow">
+        {% if content %}
+          <section class="container-width-narrow">
+            <div class="card --info">
+              {{ content | safe }} 
+            </div> 
+          </section>
+        {% endif %}
+
         {% if blocks %} {% for block in blocks %} 
 
         {% if block.type == "hero" %}

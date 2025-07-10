@@ -6,4 +6,3 @@ background: "green-cloud"
 blocks:
   - type: contact-block
 ---
-Contact page test text

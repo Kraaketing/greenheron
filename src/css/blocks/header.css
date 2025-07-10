@@ -14,7 +14,7 @@ header {
   }
   a {
     color: var(--pink);
-    font-weight: bold;
+    /* font-weight: bold; */
   }
   /* a:nth-child(2) {
     color: var(--pink);

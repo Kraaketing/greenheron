@@ -3,6 +3,13 @@
 input {
     border: 2px solid var(--orange);
     border-radius: 5rem;
+    width: min(100%, 10rem);
+}
+
+input:nth-of-type(3) {
+  width: 100%;
+  height: min(100%, 6rem);
+  border-radius: 1.6rem;
 }
 
 
@@ -10,6 +17,9 @@ input {
 input[type="submit"] {
     background-color: var(--orange);
     color: var(--pink-white);
+    padding: 0.3rem;
+    margin-top: 1rem;
+    font-weight: bold;
 }
 
 @supports(-webkit-appearance: none) or (-moz-appearance: none) {

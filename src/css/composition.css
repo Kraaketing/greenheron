@@ -11,7 +11,6 @@
   }
 }
 
-
 .standard-container {
   display: flex;
   flex-direction: column;
@@ -33,6 +32,11 @@
 .container-width-wide {
   width: min(95%, 80rem);
 }
+
+.container-width-narrow {
+  width: min(90dvw, 50rem);
+}
+
 .center {
   align-content: center;
   height: 100%;
