@@ -2,6 +2,7 @@
 :root {
   --green: oklch(0.661 0.1708 174.11);
   --green-dark: oklch(0.5322 0.1371 174.11);
+  --green-black: oklch(35.092% 0.06861 171.213);
   --green-dark-shadow: oklch(0.5322 0.1371 174.11 /40%);
   --orange: oklch(0.706 0.2372 42.84);
   --orange-bright: oklch(0.7867 0.1741 50.56);
@@ -38,7 +39,7 @@
 }
 
 .orange-shadow {
-    filter: drop-shadow(-2rem 2.5rem 0 var(--orange));
+  filter: drop-shadow(-2rem 2.5rem 0 var(--orange));
 }
 
 .green-cloud {

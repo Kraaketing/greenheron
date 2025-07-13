@@ -1,29 +1,74 @@
-<section class="center container-width-narrow">
-  <p>any questions or preliminary information you want to address. more text</p>
+<section class="center container-width-narrow | contact">
+  <p class="orange-text">
+    Send me a message to let me know your requrenments, and I will get in touch
+    to schedule an orientation call.
+  </p>
+  <br />
   <form action="" class="orange-text">
-    <label for="flname">Name</label>
-    <br />
-    <input type="text" id="flname" name="flname" />
-    <br />
-    <!-- <label for="company">Company</label>
-    <br />
-    <input type="text" id="company" name="company" />
-    <br /> -->
-    <label for="address">Email address</label>
-    <br />
-    <input type="text" id="address" name="address" />
-    <br />
+    <div class="input-container">
+      <div>
+        <label for="fname">First Name</label>
+        <br />
+        <input
+          type="text"
+          id="fname"
+          name="fname"
+          placeholder="Your first name"
+          required
+        />
+      </div>
+      <div>
+        <label for="lname">Last Name</label>
+        <br />
+        <input
+          type="text"
+          id="lname"
+          name="lname"
+          placeholder="Your last name"
+          required
+        />
+      </div>
+    </div>
+    <div class="input-container">
+      <div>
+        <label for="company">Company</label>
+        <br />
+        <input 
+        type="text" 
+        id="company" 
+        name="company" 
+        placeholder="Your company name"
+        />
+      </div>
+        <div>
+          
+        <label for="address">Email Address</label>
+        <br />
+        <input
+          type="email"
+          id="address"
+          name="address"
+          placeholder="Your email address"
+          required
+        />
+      </div>
+    </div>
     <!-- <input type="radio" id="simple" name="option" value="Simple Page" />
     <label for="simple">Simple page</label>
     <input type="radio" id="custom" name="option" value="Custom page" />
     <label for="custom">Custom page</label>
     <input type="radio" id="other" name="option" value="Other inquiry" />
     <label for="other">Other inquiery</label>
-    <br /> -->
+    <br/> -->
     <label for="message">Message</label>
     <br />
-    <input type="text" id="message" name="message" />
-    <br />
+    <textarea
+      maxlength="2000"
+      id="message"
+      name="message"
+      placeholder="Let me how I can help you!"
+      required
+    ></textarea>
     <input type="submit" value="Submit" />
   </form>
 </section>
