@@ -6,7 +6,10 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  div:first-child {
+  /* div:first-child {
+    flex-grow: 1;
+  } */
+  .height-flex-grow {
     flex-grow: 1;
   }
 }
@@ -15,10 +18,6 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-}
-
-.height-flex-grow {
-  flex-grow: 1;
 }
 
 .full-height {
@@ -40,6 +39,11 @@
 .center {
   align-content: center;
   height: 100%;
+}
+
+.centerflex {
+  display: flex;
+  justify-content: center;
 }
 
 .twelve-grid {

@@ -16,6 +16,7 @@
     oklch(0.917 0.0582 5.83) 0%,
     oklch(0.8294 0.1659 341.93) 100%
   );
+  /* font-size: min(2rem calc(0.9rem + 0.5vw)); */
 }
 
 .pink-text {

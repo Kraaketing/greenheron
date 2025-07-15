@@ -1,8 +1,13 @@
 .contact {
+  svg {
+    margin: calc(5rem + 2vw) 3rem;
+    width: 15rem;
+  }
+
   p {
     margin-top: 3rem;
   }
-  
+
   input,
   textarea {
     border: 2px solid var(--orange);
@@ -16,14 +21,16 @@
     border-color: var(--pink);
   }
 
-  input {
-    width: 15rem;
-    /* width: min(100%, 15rem); */
-  }
-
   textarea::placeholder, 
   input::placeholder {
         color: var(--orange-bright);
+  }
+
+  input {
+    /* width: 15rem; */
+    /* dette cirker, men trenger tweaking: */
+    /* width: calc(15vw + 5rem); */
+    width: clamp(15rem, calc(15vw + 10rem), 20rem);
   }
 
   textarea {
@@ -33,6 +40,7 @@
     min-height: 12rem;
     border-radius: 1.6rem;
     resize: vertical;
+    padding: 1rem 1.3rem;
   }
 
   textarea::-webkit-scrollbar-thumb {
@@ -45,11 +53,10 @@
 
   textarea,
   input:not(input[type="submit"]) {
-    margin-bottom: calc(1rem + 1vw);
+    margin-bottom: calc(1em + 1vw);
   }
 
   p,
-  textarea,
   input:not(input[type="submit"]) {
     padding: 0.5rem 1.3rem;
   }
@@ -77,6 +84,7 @@
   .input-container {
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
     div:first-child {
       margin-right: 0.5rem;
     }
