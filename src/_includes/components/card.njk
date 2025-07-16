@@ -1,5 +1,5 @@
 <article class="card{% if cardStyle %} {{ cardStyle }}{% endif %}">
   <h3>{{ card.title }}</h3>
-  <p>{{ card.content | safe }}</p>
+  {{ card.content | markdown | safe }}
   <h3>{{ card.quotee }}</h3>
 </article>

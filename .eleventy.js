@@ -1,9 +1,15 @@
 const { minify } = require("html-minifier-terser");
+const markdownIt = require("markdown-it");
+const md = new markdownIt();
 
 module.exports = function (eleventyConfig) {
   // Passthough paths
   eleventyConfig.addPassthroughCopy({ "src/static": "/" });
   eleventyConfig.addPassthroughCopy("src/css/bundle.css");
+  //markdown filter
+  eleventyConfig.addFilter("markdown", function (content) {
+    return md.render(content);
+  });
 
   // Minify html output
   eleventyConfig.addTransform("htmlmin", function (content, outputPath) {
@@ -11,7 +17,7 @@ module.exports = function (eleventyConfig) {
       const minified = minify(content, {
         useShortDoctype: true,
         removeComments: true,
-        collapseWhitespace: true
+        collapseWhitespace: true,
       });
       return minified;
     }

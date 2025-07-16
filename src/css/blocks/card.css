@@ -6,97 +6,118 @@
   h3 {
     font-size: larger;
   }
-}
 
-.intro-card {
-  box-shadow: 0.3rem 0.7rem 0.4rem var(--green-dark-shadow),
-    -0.1rem -0.1rem 0.2rem white;
-  h3 {
-    text-align: center;
-    color: var(--green-dark);
+  &.intro-card {
+    box-shadow: 0.3rem 0.7rem 0.4rem var(--green-dark-shadow),
+      -0.1rem -0.1rem 0.2rem white;
+    h3 {
+      text-align: center;
+      color: var(--green-dark);
+    }
+    p {
+      margin-top: 1em;
+    }
   }
-}
 
-.offer {
-  color: var(--pink);
-  width: min(26rem, 80%);
-  cursor: pointer;
-  transition: transform 0.9s;
-  text-decoration: none;
-  box-shadow: 0.3rem 0.7rem 0 var(--green-dark-shadow), -0.1rem -0.1rem 0 white;
-  .price {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: baseline;
+  &.offer {
+    color: var(--pink);
+    width: min(26rem, 80%);
+    cursor: pointer;
+    transition: transform 0.9s;
+    text-decoration: none;
+    box-shadow: 0.3rem 0.7rem 0 var(--green-dark-shadow),
+      -0.1rem -0.1rem 0 white;
+    .price {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: baseline;
+    }
+    h3, h4 {
+      text-align: center;
+    }
+    h3 {
+      margin-top: 5%;
+      /* color: var(--orange); */
+      font-size: 3rem;
+      margin-bottom: 0.5em;
+      background: linear-gradient(175deg, var(--orange) 40%, var(--pink) 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      filter: drop-shadow(0 0 2rem white);
+      line-height: 1.1em;
+    }
+    h4 {
+      display: inline-block;
+      font-size: clamp(7rem, 11vw, 13rem);
+      letter-spacing: -0.04em;
+      background: linear-gradient(175deg, var(--orange) 40%, var(--pink) 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      filter: drop-shadow(0 0 2rem white);
+      margin-bottom: 0;
+    }
+    h4:first-child {
+      font-size: clamp(5rem, 8vw, 10rem);
+    }
+    .subhead {
+      width: 80%;
+      /* color: var(--orange); */
+    }
+    ul {
+      list-style-position: inside;
+      font-size: large;
+      font-weight: bold;
+      margin: 5% 0 10%;
+      width: 80%;
+    }
   }
-  h3 {
-    margin-top: 5%;
-    color: var(--orange);
-    font-size: 2rem;
-    text-align: center;
+  &.offer:hover {
+    transform: scale(1.1);
   }
-  h4 {
-    display: inline-block;
-    font-size: clamp(7rem, 11vw, 13rem);
-    letter-spacing: -0.04em;
-    background: linear-gradient(175deg, var(--orange) 40%, var(--pink) 100%);
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-    filter: drop-shadow(0 0 2rem white);
-    margin-bottom: 0;
-  }
-  h4:first-child {
-    font-size: clamp(5rem, 8vw, 10rem);
-  }
-  ul {
-    list-style-position: inside;
-    font-size: large;
-    font-weight: bold;
-    margin: 5% 0 10%;
-    width: 80%;
-  }
-}
-.offer:hover {
-  transform: scale(1.1);
-}
 
-.quote-card {
-  padding: 3rem 5% 2rem;
-  p {
-    font-style: italic;
+  &.quote-card {
+    padding: 3rem 5% 2rem;
+    p {
+      font-style: italic;
+    }
+    h3 {
+      padding-left: 1rem;
+    }
   }
-  h3 {
-    padding-left: 1rem;
-  }
-}
 
-.--info {
-  padding: 2rem 5% 5rem;
-    box-shadow: 0.3rem 0.7rem 0 var(--green-dark-shadow), -0.1rem -0.1rem 0 white;
+  /* For privacy policy & terms and conditions pages: */
+  &.--info {
+    padding: 2rem 5% 5rem;
+    box-shadow: 0.3rem 0.7rem 0 var(--green-dark-shadow),
+      -0.1rem -0.1rem 0 white;
 
-  p {
-    margin-bottom: 1rem;
-  }
-  h1 {
-    font-size: 3rem;
-    text-align: center;
-    margin: 1em 0;
-  }
-  h2 {
-    font-size: 1.5rem;
-    margin: 1em 0;
-  }
-  h1, h2 {
-    color: var(--green-dark);
-  }
-  ul, ol{
-    /* list-style-position: inside; */
+    p {
+      margin-bottom: 1rem;
+    }
+    h1 {
+      font-size: 3rem;
+      text-align: center;
+      margin: 1em 0;
+    }
+    h2 {
+      font-size: 1.5rem;
+      margin: 1em 0;
+    }
+    h1,
+    h2 {
+      color: var(--green-dark);
+    }
+    ul,
+    ol {
+      /* list-style-position: inside; */
       /* text-indent: 2rem; */
       margin-left: 2rem;
-  }
-  a {
-    color: var(--pink);
+    }
+    a {
+      color: var(--pink);
+    }
   }
 }

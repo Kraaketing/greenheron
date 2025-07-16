@@ -19,6 +19,9 @@
     }
     p {
       color: var(--pink-white);
+      width: min(26rem, 80%);
+      font-weight: bold;
+      font-size: 1.1rem;
     }
     .offers {
       display: flex;
