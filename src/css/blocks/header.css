@@ -4,19 +4,28 @@
 header {
   display: flex;
   justify-content: space-between;
+  .head-right {
+    display: flex;
+    align-items: baseline;
+    border-bottom: solid 4px;
+  height: fit-content;
+  }
+  .ball {
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+    background-color: var(--orange-bright);
+    margin-right: 0.6rem;
+  }
+  .head-left, .head-right {
+    margin: min(5vw, 2rem);
+  }
   a, span {
-    margin: 1rem 3%;
     text-decoration: none;
+    font-size: clamp(1.5rem, 1.6rem + 1vw, 2rem);
+    color: var(--green-black);
   }
-  span {
+  a:hover {
     color: var(--orange);
-    
   }
-  a {
-    color: var(--pink);
-    /* font-weight: bold; */
-  }
-  /* a:nth-child(2) {
-    color: var(--pink);
-  } */
 }

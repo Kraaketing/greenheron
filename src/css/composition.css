@@ -1,4 +1,3 @@
-
 /* COMPOSITION */
 .push-footer {
   height: 100vh;
@@ -34,6 +33,11 @@
 
 .container-width-narrow {
   width: min(90dvw, 50rem);
+}
+
+.max-content {
+  width: 100%;
+  padding: 0 5vw;
 }
 
 .center {

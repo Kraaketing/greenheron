@@ -1,11 +1,8 @@
 .contact {
+  margin-top: calc(3rem + 6vw);
   svg {
     margin: calc(5rem + 2vw) 3rem;
     width: 15rem;
-  }
-
-  p {
-    margin-top: 3rem;
   }
 
   input,

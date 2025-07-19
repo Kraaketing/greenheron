@@ -7,9 +7,10 @@
         As it is early days for Green Heron, I am holding an opening offer for
         new clients. Huzzah!
       </p>
-      <!-- <div class="offers"> -->
+      <div class="offers">
         <a href="/contact" class="standard-container | card offer">
-          <h3>Click here to request a quote</h3>
+          <span class="tophead">Click here to</span>
+          <h3>request a quote</h3>
           <span class="subhead">Prices will be discounted in exhange for a testimonial. For the first customers I will aim for <b>40% off</b> depending on the scope of work.</span>
           <!-- <div class="price">
             <h4>get a quote</h4>
@@ -21,11 +22,11 @@
             <li>Option for headless external CMS</li>
           </ul>
         </a>
-        <!-- <a href="/contact" class="standard-container | card offer">
+        <a href="/contact" class="standard-container | card offer">
           <h3>Simple design</h3>
           <div class="price">
             <h4>€</h4>
-            <h4>300</h4>
+            <h4>500</h4>
           </div>
           <ul>
             <li>Custom designed website with up to two design iterations</li>
@@ -33,8 +34,8 @@
             <li>Headless external CMS</li>
             <li>Developed with sustanability in mind space</li>
           </ul>
-        </a> -->
-      <!-- </div> -->
+        </a>
+      </div>
       {% for card in block.cards %} {% set cardStyle = "offer" %} {% include
       "components/card.njk" %} {% endfor%}
     </div>

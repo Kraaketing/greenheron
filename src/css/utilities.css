@@ -43,7 +43,11 @@
   filter: drop-shadow(-2rem 2.5rem 0 var(--orange));
 }
 
-.green-cloud {
+.background--light-orange {
+  background: var(--orange-white);
+}
+
+/* .green-cloud {
   background: linear-gradient(
       217deg,
       oklch(0.9517 0.0855 144.87 / 70%),
@@ -66,11 +70,11 @@
     );
   background-size: 300% 300%;
   background-attachment: fixed;
-  animation: gradientcloud-gradient 30s ease infinite;
+  animation: gradientcloud-gradient 30s ease 2;
 }
 @keyframes gradientcloud-gradient {
   0% {
-    background-position: 0% 50%;
+    background-position: 0% 0%;
   }
   20% {
     background-position: 40% 90%;
@@ -85,6 +89,6 @@
     background-position: 60% 20%;
   }
   100% {
-    background-position: 0% 50%;
+    background-position: 0% 0%;
   }
-}
+} */
