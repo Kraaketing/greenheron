@@ -1,13 +1,37 @@
+@font-face {
+  font-family: 'Arvo';
+  src: url('/fonts/Arvo-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Arvo';
+  src: url('/fonts/Arvo-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Arvo';
+  src: url('/fonts/Arvo-Italic.ttf') format('truetype');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
 * {
   margin: 0;
   padding: 0;
   border: 0;
   outline: 0;
   font-size: 100%;
-  line-height: 1.4;
+  line-height: 1.55;
   /* vertical-align: baseline; */
   /* background: transparent; */
-  font-family: "Trebuchet MS", Arial;
+  font-family: "Arvo", "Trebuchet MS", Arial;
   /* font-family: Arvo, Arial, "Trebuchet MS"; */
   scroll-behavior: smooth;
   box-sizing: border-box;
@@ -19,11 +43,17 @@ h3 {
   text-wrap: balance;
   margin-bottom: 1em;
 }
-a {
+
+a,
+summary {
   cursor: pointer;
 }
 
-p, ul , a, span {
+p, ul , a, span, details {
   font-size: clamp(1.2rem, 1rem + 2vw, 1.8rem);
 }
 
+.period {
+  color: var(--orange-bright);
+  margin-right: 0.5rem;
+}

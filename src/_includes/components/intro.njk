@@ -1,12 +1,56 @@
-<section id="intro" class="standard-container container-width-wide | intro">
-  <div class="__six-grid">
-    <figure>
-    {% include "svg/four-d-bean.njk" %}
+<section id="intro" class="standard-container container-width-narrow | intro">
+  <article class="flex-container small-gap">
+    <figure class="jorg">
+      <img alt="portrait of Jørgen" class="round-image" src="/jorgen.webp" alt="Jørgen" />
     </figure>
-        {% for card in block.cards %}
-            {% set cardStyle = "intro-card" %}
-            {% include "components/card.njk" %}
-        {% endfor %}
-  </div>
-  <figure class="bean-container">{% include "svg/four-d-bean.njk" %}</figure>
+    <p class="two-thirds text-right">
+      Hi! I am Jørgen, and Green Heron is my one-man web agency<span class="period">.</span> I design and
+      code websites from the ground up with the goal of having the process and
+      product be as environmentally friendly as possible<span class="period">.</span>
+    </p>
+  </article>
+  <article class="flex-container big-gap">
+    <div class="two-thirds">
+      <h2 class="font-big">how I work</h2>
+      <p>
+        I use lightweight technologies and optimise code to minimise energy
+        consumption, and hosting services that use green energy<span class="period">.</span> I design and
+        code everything myself, which results in web pages that are:
+      </p>
+      <details>
+        <summary>sustainable</summary>
+        text for that
+      </details>
+      <details>
+        <summary>accessible</summary>
+        text for that
+      </details>
+      <details>
+        <summary>fast</summary>
+        text for that
+      </details>
+      <details>
+        <summary>secure</summary>
+        I ensure that the sites are secure by working with static file serving,
+        and up-to-date SSL certificates from our hosting provider<span class="period">.</span>
+      </details>
+      <details>
+        <summary>future-proof</summary>
+        text for that
+      </details>
+      <details>
+        <summary>beautiful</summary>
+        text for that
+      </details>
+    </div>
+    <figure class="standard-container | | birbs">
+      {% include "svg/birb1.njk" %} {% include "svg/birb2.njk" %} {% include
+      "svg/birb3.njk" %}
+    </figure>
+  </article>
 </section>
+<!-- 
+{% for card in block.cards %}
+{% set cardStyle = "intro-card" %}
+{% include "components/card.njk" %}
+{% endfor %} -->

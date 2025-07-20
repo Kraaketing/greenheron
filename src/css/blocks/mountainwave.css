@@ -1,21 +1,11 @@
 .pricing {
   width: 100%;
   .grass {
-    display: flex;
-    justify-content: center;
-    background: linear-gradient(var(--green-dark), var(--green));
     width: 100%;
+    background: linear-gradient(var(--green-dark), var(--green));
     h2 {
-      margin: 2vw 0 2%;
-      font-size: max(3rem, 6vw);
-      letter-spacing: -0.04em;
-      line-height: 1.2em;
+      margin: 5rem 0 3%;
       color: var(--orange-white);
-      text-align: center;
-      /* background: linear-gradient(175deg, var(--orange) 40%, var(--pink) 100%); */
-      /* -webkit-background-clip: text; */
-      /* background-clip: text; */
-      /* filter: drop-shadow(-0.02em 0.02em 0 var(--orange-white)) drop-shadow(0 0 2rem var(--green)); */
     }
     p {
       color: var(--pink-white);
