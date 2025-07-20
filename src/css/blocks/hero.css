@@ -1,8 +1,8 @@
 /* Hero */
 .hero-container {
   justify-content: center;
-  /* full vh minus header and margin of next element: */
-  height: calc(100vh - 3rem - 8rem);
+  /* full vh minus header and margin of next element, to give white space above next setion when following page link: */
+  height: calc(100vh - 7rem - 8rem);
   svg, a {
     width: min(100%, 60rem);
 
@@ -12,12 +12,12 @@
   }
   a {
     font-size: max(2rem, 4vw);
-    letter-spacing: -0.04em;
+    /* letter-spacing: -0.04em; */
     color: var(--orange-bright);
     text-align: end;
     font-size: clamp(1rem, 0.6rem + 3vw, 2.8rem);
     text-decoration: none;
-    padding-right: min(19%, 11rem);
+    /* padding-right: min(19%, 11rem); */
   }
 }
 
