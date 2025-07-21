@@ -1,34 +1,35 @@
 .intro {
   padding-top: 2rem;
   margin-bottom: 6rem;
-    .jorg {
-      width: min(80%, 14rem);
-      margin-inline: auto;
-    }
-    .birbs {
-      margin-top: 3rem;
-      margin-inline: auto;
-    }
-    h2 {
-      border-left: dotted 1.5rem var(--orange-bright);
-      padding-left: 1rem;
-    }
-    summary {
-      margin-left: -1.5rem;
-      font-weight: bold;
-    }
-    svg:first-child {
-      width: 15rem;
-    }
-    svg:nth-child(2) {
-      width: 10rem;
-    }
-    svg:last-child {
-      width: 14rem;
-    }
-    svg:not(:last-child) {
-      margin-bottom: 10rem;
-    }
+  .jorg {
+    width: min(80%, 14rem);
+    margin-inline: auto;
+  }
+  .birbs {
+    margin-top: 3rem;
+    margin-inline: auto;
+  }
+  h2 {
+    border-left: dotted 1.5rem var(--orange-bright);
+    padding-left: 1rem;
+    line-height: 1.1;
+  }
+  summary {
+    margin-left: -1.5rem;
+    font-weight: bold;
+  }
+  svg:first-child {
+    width: 15rem;
+  }
+  svg:nth-child(2) {
+    width: 10rem;
+  }
+  svg:last-child {
+    width: 14rem;
+  }
+  svg:not(:last-child) {
+    margin-bottom: 10rem;
+  }
   article:has(details) {
     margin-left: 1rem;
   }

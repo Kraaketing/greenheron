@@ -1,24 +1,44 @@
-.pricing {
+.ground {
   width: 100%;
   .grass {
+    margin-top: -0.5rem;
     width: 100%;
-    background: linear-gradient(var(--green-dark), var(--green));
+        padding: 2rem 1rem;
+    background: linear-gradient(var(--green-dark) 5%, var(--green));
+    article {
+      width: min(100%, 54rem);
+      margin-inline: auto;
+    }
     h2 {
-      margin: 5rem 0 3%;
-      color: var(--orange-white);
+      border-bottom: solid min(calc(0.4rem + 2.9vw), 2.6rem) white;
+      width: fit-content;
     }
+    h2,
     p {
-      color: var(--pink-white);
-      width: min(26rem, 80%);
-      font-weight: bold;
-      font-size: 1.1rem;
+      color: white;
+      padding-bottom: 1em;
     }
-    .offers {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      width: max(19rem, 80%);
-      gap: 3rem;
+    a {
+      color: var(--orange-bright);
+    }
+    .illustrations {
+      gap: 6rem 4rem;
+      margin-top: 4rem;
+      .illustration {
+        width: min(100%, 25rem);
+      }
+      .logo-container {
+        background: white;
+        height: 100%;
+        aspect-ratio: 1 / 1;
+        svg {
+          margin: 26% 36% 0;
+        }
+      }
+      img {
+        width: 100%;
+        margin-inline: auto;
+      }
     }
   }
 }

@@ -1,0 +1,25 @@
+.testimonials {
+  h2 {
+    border-bottom: solid min(calc(0.4rem + 2.9vw), 2.6rem) var(--green-black);
+    width: fit-content;
+    padding: 4rem 0 0.8rem;
+    margin-bottom: 0.5em;
+  }
+  div {
+    margin: min(3rem + 3vw, 6rem) 0;
+    p {
+      font-style: italic;
+    }
+    svg {
+      width: min(100%, 20rem);
+      margin-bottom: 1.5rem;
+    }
+    span {
+      color: var(--orange-bright);
+      line-height: 1.8;
+    }
+    article {
+
+    }
+  }
+}
