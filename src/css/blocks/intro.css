@@ -4,6 +4,7 @@
   .jorg {
     width: min(80%, 14rem);
     margin-inline: auto;
+    align-content: center;
   }
   .birbs {
     margin-top: 3rem;
@@ -14,9 +15,16 @@
     padding-left: 1rem;
     line-height: 1.1;
   }
+  details:first-child {
+    margin-top: 1rem;
+  }
+  details:open {
+    summary {
+      color: var(--orange-bright);
+    }
+  }
   summary {
     margin-left: -1.5rem;
-    font-weight: bold;
   }
   svg:first-child {
     width: 15rem;

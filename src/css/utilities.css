@@ -7,6 +7,7 @@
   --orange: oklch(0.706 0.2372 42.84);
   --orange-bright: oklch(0.7867 0.1741 50.56);
   --orange-white: oklch(0.9859 0.0288 42.84);
+  --orange-white-fade: oklch(0.9859 0.0288 42.84 /60%);
   --pink: oklch(0.7054 0.2562 3.43);
   --pink-white: oklch(0.99 0.01 5.61);
   --pink-white--glow: oklch(0.99 0.01 5.61 / 40%);
@@ -18,13 +19,13 @@
   );
 }
 
-p, ul , a, span, details {
+p, ul, ol , a, span, details, label, input, textarea {
   font-size: clamp(1.2rem, 1rem + 2vw, 1.8rem);
 }
 
 .period {
   color: var(--orange-bright);
-  margin-right: 0.5rem;
+  margin-right: 1rem;
 }
 
 .footnote {
@@ -35,11 +36,11 @@ p, ul , a, span, details {
   font-size: clamp(1.2rem, 1rem + 1vw, 1.8rem);
 }
 
-.font-big {
+h2, h3, .font-big {
   font-size: clamp(1.8rem, 1rem + 4vw, 2.2rem);
 }
 
-.font-huge {
+h1, .font-huge {
   font-size: clamp(2rem, 2rem + 4vw, 6.2rem);
 }
 

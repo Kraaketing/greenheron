@@ -1,7 +1,7 @@
 .hero-container {
   justify-content: center;
   /* full vh minus header and margin of next element, to give white space above next setion when following page link: */
-  height: calc(100vh - 7rem - 2rem);
+  height: calc(100vh - 7rem - min(5vw, 2rem));
   svg {
     /* width: min(100%, 60rem); */
     margin: -10vw 0 min(6%, 1rem);

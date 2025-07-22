@@ -7,7 +7,7 @@
       content="Custom-designed, low-impact websites from Green Heron. Built with minimal, efficient code and hosted on eco-friendly servers for a more sustainable web."
     />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/svg+xml" href="/monomonogram.svg">
+    <link rel="icon" type="image/svg+xml" href="/monogramdot.svg">
     <title>{{ title }}</title>
     <link rel="stylesheet" href="/styles.css" />
   </head>
@@ -16,10 +16,8 @@
       {% include "components/header.njk" %}
       <main class="standard-container height-flex-grow">
         {% if content %}
-          <section class="container-width-narrow">
-            <div class="card --info">
+          <section class="container-width-narrow | info">
               {{ content | safe }} 
-            </div> 
           </section>
         {% endif %}
 

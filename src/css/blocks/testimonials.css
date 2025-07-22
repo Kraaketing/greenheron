@@ -10,6 +10,9 @@
     p {
       font-style: italic;
     }
+    p:not(last-child) {
+        margin-bottom: 1rem;
+    }
     svg {
       width: min(100%, 20rem);
       margin-bottom: 1.5rem;

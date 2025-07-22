@@ -1,79 +1,12 @@
 <section class="center container-width-narrow | contact">
-  <!-- <div class="centerflex">
-    {% include "svg/four-d-bean.njk" %}
-  </div> -->
-  <p class="orange-text">
-    Send me a message to let me know your requirenments, and I will get in touch
-    to schedule an orientation call.
-  </p>
-  <br />
-  <form action="" class="orange-text">
-    <div class="input-container">
-      <div>
-        <label for="fname">First Name</label>
-        <br />
-        <input
-          type="text"
-          id="fname"
-          name="fname"
-          placeholder="Your first name"
-          required
-        />
-      </div>
-      <div>
-        <label for="lname">Last Name</label>
-        <br />
-        <input
-          type="text"
-          id="lname"
-          name="lname"
-          placeholder="Your last name"
-          required
-        />
-      </div>
-    </div>
-    <div class="input-container">
-      <div>
-        <label for="company">Company</label>
-        <br />
-        <input
-          type="text"
-          id="company"
-          name="company"
-          placeholder="Your company name"
-        />
-      </div>
-      <div>
-        <label for="address">Email Address</label>
-        <br />
-        <input
-          type="email"
-          id="address"
-          name="address"
-          placeholder="Your email address"
-          required
-        />
-      </div>
-    </div>
-    <!-- <input type="radio" id="simple" name="option" value="Simple Page" />
-    <label for="simple">Simple page</label>
-    <input type="radio" id="custom" name="option" value="Custom page" />
-    <label for="custom">Custom page</label>
-    <input type="radio" id="other" name="option" value="Other inquiry" />
-    <label for="other">Other inquiery</label>
-    <br/> -->
-    <label for="message">Message</label>
-    <br />
-    <textarea
-      maxlength="2000"
-      id="message"
-      name="message"
-      placeholder="Let me how I can help you!"
-      required
-    ></textarea>
-    <input type="submit" value="Submit" />
+  <span>let me how I can help you!</span>
+  <form action="">
+    <label for="name">name</label>
+    <input type="text" id="name" name="name" placeholder="type here" required />
+    <label for="address">email address</label>
+    <input type="email" id="address" name="address" required />
+    <label for="message">message</label>
+    <textarea maxlength="4000" id="message" name="message" required></textarea>
+    <input type="submit" value="send" />
   </form>
-    <div class="centerflex">
-    {% include "svg/four-d-bean.njk" %}
-  </div>
 </section>

@@ -14,8 +14,7 @@ footer {
     display: flex;
     justify-content: space-between;
     gap: 1rem;
-    /* width: 17rem; */
-  }
+    text-align: center;  }
   a {
     color: var(--orange-bright);
   }
