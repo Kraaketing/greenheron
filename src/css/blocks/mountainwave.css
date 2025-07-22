@@ -5,7 +5,9 @@
     margin-bottom: -1%;
   }
   .grass {
+    /* margins to avoid accidental whitespace between svg & container in ff */
     margin-top: -0.5rem;
+    margin-bottom: -0.1rem;
     width: 100%;
     padding: 2rem 1rem;
     background: linear-gradient(var(--green-dark) 5%, var(--green));
