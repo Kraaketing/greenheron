@@ -11,7 +11,7 @@
     margin-inline: auto;
   }
   h2 {
-    border-left: dotted 1.5rem var(--orange-bright);
+    border-left: dotted 0.7em var(--orange-bright);
     padding-left: 1rem;
     line-height: 1.1;
   }

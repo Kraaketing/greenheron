@@ -1,6 +1,13 @@
 <footer class="standard-container">
-    {% include "svg/chunky-monogram-dot.njk" %}
-  <span>
+  {% if page.url == "/" %}
+    <a href="#top">
+        {% include "svg/chunky-monogram-dot.njk" %}
+    </a>
+  {% else %}
+    <a href="/">
+        {% include "svg/chunky-monogram-dot.njk" %}
+    </a>
+  {% endif %}  <span>
   <script>
     document.write(new Date().getFullYear());
   </script>

@@ -25,7 +25,9 @@ p, ul, ol , a, span, details, label, input, textarea {
 
 .period {
   color: var(--orange-bright);
-  margin-right: 1rem;
+  margin-right: 0.7rem;
+  font-size: 1.3em;
+  line-height: 0;
 }
 
 .footnote {
@@ -51,10 +53,6 @@ h1, .font-huge {
   background-color: var(--orange-bright);
 }
 
-.pink-text {
-  color: var(--pink);
-}
-
 .orange-text {
   color: var(--orange);
 }
@@ -69,10 +67,6 @@ h1, .font-huge {
   border-radius: 50%;
   width: 100%;
   height: auto;
-}
-
-.orange-shadow {
-  filter: drop-shadow(-2rem 2.5rem 0 var(--orange));
 }
 
 .background--light-orange {
