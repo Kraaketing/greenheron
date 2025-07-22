@@ -19,6 +19,7 @@
     margin-top: 1rem;
   }
   details:open {
+    padding-bottom: 0.5rem;
     summary {
       color: var(--orange-bright);
     }

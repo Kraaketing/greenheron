@@ -1,25 +1,39 @@
 .ground {
   width: 100%;
+  .ball {
+    margin-left: 15%;
+    margin-bottom: -1%;
+  }
   .grass {
     margin-top: -0.5rem;
     width: 100%;
-        padding: 2rem 1rem;
+    padding: 2rem 1rem;
     background: linear-gradient(var(--green-dark) 5%, var(--green));
     article {
       width: min(100%, 54rem);
       margin-inline: auto;
-    }
-    h2 {
-      border-bottom: solid min(calc(0.4rem + 2.9vw), 2.6rem) white;
-      width: fit-content;
-    }
-    h2,
-    p {
-      color: white;
-      padding-bottom: 1em;
-    }
-    a {
-      color: var(--orange-bright);
+      h2 {
+        font-size: clamp(2.3rem, 9vw, 6.2rem);
+        margin: 0 0 -1em;
+        /* border-bottom: solid min(calc(0.4rem + 2.9vw), 2.6rem) white;
+        width: fit-content; */
+      }
+      .squiggle {
+        width: clamp(19rem, 73vw, 52rem);
+        margin-left: clamp(-7rem, -8vw, -2.1rem);
+        margin-bottom: clamp(-2.9rem, -6vw, -1.8rem);
+      }
+      h2,
+      p {
+        color: white;
+      }
+
+      p {
+        padding-bottom: 1em;
+      }
+      a {
+        color: var(--orange-bright);
+      }
     }
     .illustrations {
       gap: 6rem 4rem;
