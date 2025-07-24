@@ -16,14 +16,10 @@
     svg {
       width: min(100%, 20rem);
       margin-bottom: 1.5rem;
-      margin-inline: auto;
     }
     span {
       color: var(--orange-bright);
       line-height: 1.8;
-    }
-    article {
-
     }
   }
 }
