@@ -44,6 +44,7 @@ h3 {
   font-weight: normal;
 }
 
+button,
 a,
 summary {
   cursor: pointer;

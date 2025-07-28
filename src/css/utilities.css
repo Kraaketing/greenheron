@@ -1,5 +1,9 @@
 /* UTILITIES */
 :root {
+  --one: oklch(0.9859 0.0288 42.84);
+  --two: oklch(0.2658 0.0821 160.09);
+  --three: oklch(0.7867 0.1741 50.56);
+  --four: oklch(0.9859 0.0288 42.84 /60%);
   --green: oklch(0.661 0.1708 174.11);
   --green-dark: oklch(0.5322 0.1371 174.11);
   --green-black: oklch(0.2658 0.0821 160.09);
@@ -7,8 +11,8 @@
   --orange: oklch(0.706 0.2372 42.84);
   --orange-bright: oklch(0.7867 0.1741 50.56);
   --orange-white: oklch(0.9859 0.0288 42.84);
-  --orange-white-fade: oklch(0.9859 0.0288 42.84 /60%);
   --pink: oklch(0.7054 0.2562 3.43);
+  --blue-dark: oklch(0.2221 0.062 235.7);
   --pink-white: oklch(0.99 0.01 5.61);
   --pink-white--glow: oklch(0.99 0.01 5.61 / 40%);
   --shadow: oklch(0.4669 0.2072 30.44 /40%);
@@ -17,15 +21,72 @@
     oklch(0.917 0.0582 5.83) 0%,
     oklch(0.8294 0.1659 341.93) 100%
   );
+  @media (prefers-color-scheme: dark) {
+    --one: oklch(0.2221 0.062 235.7);
+    --two: oklch(0.9859 0.0288 42.84);
+    --three: oklch(0.5668 0.2265 11.57);
+    --four: oklch(0.5668 0.2265 11.57);
+  }
+}
+
+body.light-theme {
+  --one: oklch(0.9859 0.0288 42.84);
+  --two: oklch(0.2658 0.0821 160.09);
+  --three: oklch(0.7867 0.1741 50.56);
+  --four: oklch(0.9859 0.0288 42.84 /60%);
+}
+
+body.dark-theme {
+  --one: oklch(0.2221 0.062 235.7);
+  --two: oklch(0.9859 0.0288 42.84);
+  --three: oklch(0.5668 0.2265 11.57);
+  --four: oklch(0.5668 0.2265 11.57);
 }
 
 .period {
-  color: var(--orange-bright);
+  color: var(--three);
   margin-right: 0.3rem;
   line-height: 0;
 }
 
-p, ul, ol , a, span, details, label, input, textarea {
+p,
+ul,
+ol,
+span,
+details,
+label,
+input,
+textarea,
+h1,
+h2,
+h3 {
+  color: var(--two);
+}
+
+a {
+  color: var(--three);
+}
+
+body {
+  background: var(--one);
+}
+
+.ball {
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  background-color: var(--three);
+}
+
+p,
+ul,
+ol,
+a,
+span,
+details,
+label,
+input,
+textarea {
   font-size: clamp(1.2rem, 1rem + 2vw, 1.8rem);
 }
 
@@ -37,19 +98,15 @@ p, ul, ol , a, span, details, label, input, textarea {
   font-size: clamp(1.2rem, 1rem + 1vw, 1.8rem);
 }
 
-h2, h3, .font-big {
+h2,
+h3,
+.font-big {
   font-size: clamp(1.8rem, 1rem + 4vw, 2.2rem);
 }
 
-h1, .font-huge {
+h1,
+.font-huge {
   font-size: clamp(2rem, 2rem + 4vw, 6.2rem);
-}
-
-.ball {
-  width: 1rem;
-  height: 1rem;
-  border-radius: 50%;
-  background-color: var(--orange-bright);
 }
 
 .orange-text {
@@ -68,9 +125,9 @@ h1, .font-huge {
   height: auto;
 }
 
-.background--light-orange {
+/* .background--light-orange {
   background: var(--orange-white);
-}
+} */
 
 /* .green-cloud {
   background: linear-gradient(

@@ -5,7 +5,6 @@ footer {
     height: 8rem;
   }
   span {
-    color: var(--green-black);
     font-weight: bold;
     font-size: 2.1rem;
   }
@@ -16,6 +15,6 @@ footer {
     gap: 1rem;
     text-align: center;  }
   a {
-    color: var(--orange-bright);
+    color: var(--three);
   }
 }

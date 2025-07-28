@@ -11,7 +11,7 @@
     <title>{{ title }}</title>
     <link rel="stylesheet" href="/styles.css" />
   </head>
-  <body class="push-footer | background--light-orange"  id="top">
+  <body class="push-footer"  id="top">
     <div class="standard-container container-width-full height-flex-grow">
       {% include "components/header.njk" %}
       <main class="standard-container height-flex-grow">
@@ -43,5 +43,19 @@
       </main>
     </div>
     {% include "components/footer.njk" %}
+    <script>
+const buttons = document.querySelectorAll(".ball");
+const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)");
+
+buttons.forEach(btn => {
+  btn.addEventListener("click", function () {
+    if (prefersDarkScheme.matches) {
+      document.body.classList.toggle("light-theme");
+    } else {
+      document.body.classList.toggle("dark-theme");
+    }
+  });
+});
+    </script>
   </body>
 </html>

@@ -15,7 +15,7 @@
       width: min(100%, 54rem);
       margin-inline: auto;
       .squiggle {
-        width: clamp(19rem, 73vw, 52rem);
+        width: clamp(19rem, 78vw, 52rem);
         /* margin-left: clamp(-7rem, -8vw, -2.1rem); */
         margin-bottom: clamp(-2.9rem, -5vw, -1.8rem);
         margin-left: 0; 

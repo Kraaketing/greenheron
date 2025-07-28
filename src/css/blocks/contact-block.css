@@ -2,24 +2,24 @@
   margin: calc(3rem + 6vw) 5vw 0;
   /* width: 100%; */
   span {
-    color: var(--orange-bright);
+    color: var(--three);
   }
   form {
     margin-top: 2rem;
   }
   input,
   textarea {
-    background-color: var(--green-black);
-    color: var(--orange-white);
+    background-color: var(--two);
+    color: var(--one);
   }
 
   input:focus-visible,
   textarea:focus-visible {
-    outline: 0.2rem solid var(--orange-bright);
+    outline: 0.2rem solid var(--three);
   }
 
   input::placeholder {
-    color: var(--orange-white-fade);
+    color: var(--four);
   }
 
   input:not(input[type="submit"]) {
@@ -41,8 +41,8 @@
   }
 
   input[type="submit"] {
-    background-color: var(--green-black);
-    color: var(--orange-white);
+    background-color: var(--two);
+    color: var(--one);
     padding: 0.3rem;
     width: 10rem;
     cursor: pointer;
@@ -50,10 +50,8 @@
 
   input[type="submit"]:focus-visible,
   input[type="submit"]:hover {
-    background-color: var(--orange-bright);
-    label:first-child {
-      color: aqua;
-    }
+    background-color: var(--three);
+    color: var(--two);
   }
 }
 

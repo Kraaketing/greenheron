@@ -1,6 +1,6 @@
 .testimonials {
   h2 {
-    border-bottom: solid min(calc(0.4rem + 2.9vw), 2.6rem) var(--green-black);
+    border-bottom: solid min(calc(0.4rem + 2.9vw), 2.6rem) var(--two);
     width: fit-content;
     padding: 4rem 0 0.8rem;
     margin-bottom: 0.5em;
@@ -21,5 +21,10 @@
       color: var(--orange-bright);
       line-height: 1.8;
     }
+    @media (prefers-color-scheme: dark) {
+      span {
+        color: var(--three);
+      }
+  }
   }
 }
