@@ -124,7 +124,7 @@ This privacy policy is reviewed and updated as needed.
 If you have any questions about this privacy policy or wish to exercise your rights, please contact:
 
 **Name:** Green Heron  
-**Email:** [contact@green-heron.design](contact@green-heron.design)  
+**Email:** [hei@green-heron.design](hei@green-heron.design)  
 **Location:** Portugal
 
 ---

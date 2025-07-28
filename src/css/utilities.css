@@ -139,6 +139,10 @@ h1,
   fill: var(--orange-bright);
 }
 
+.svg-line, .svg-elipse, .svg-invert {
+  transition: fill 3s ease;
+}
+
 .round-image {
   border-radius: 50%;
   width: 100%;

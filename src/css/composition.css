@@ -1,4 +1,32 @@
 /* COMPOSITION */
+.c-screen-height {
+    min-height: 100vh;
+}
+.c-full-width {
+    width:100%;
+}
+
+.c-margin-center {
+    margin-inline: auto;
+}
+
+.c-max-content {
+    padding: 0 5vw;
+}
+
+.c-flex {
+    display: flex;
+    &.c-wrap {
+        flex-wrap: wrap;
+    }
+    &.c-flex-center{
+        flex-direction: column;
+        justify-content: space-between;
+          align-items: center;
+
+    }
+}
+
 .push-footer {
   height: 100vh;
   width: 100dvw;
@@ -11,6 +39,10 @@
   .height-flex-grow {
     flex-grow: 1;
   }
+}
+
+.space-below {
+  padding-bottom: 4rem;
 }
 
 .standard-container {
@@ -33,6 +65,10 @@
 
 .container-width-narrow {
   width: min(90%, 55rem);
+}
+
+.container-width-small {
+  width: min(90%, 44rem);
 }
 
 .max-content {
