@@ -7,6 +7,7 @@ footer {
   span {
     font-weight: bold;
     font-size: 2.1rem;
+    margin-top: -0.8rem;
   }
   .legal-links {
     margin-top: 1rem;
@@ -16,5 +17,8 @@ footer {
     text-align: center;  }
   a {
     color: var(--three);
+  }
+  a:has(svg), figure{
+    font-size: 0;
   }
 }

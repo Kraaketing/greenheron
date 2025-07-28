@@ -11,6 +11,9 @@
     width: 100%;
     padding: 2rem 1rem;
     background: linear-gradient(var(--green-dark) 5%, var(--green));
+    .period {
+      color: var(--orange-bright);
+    }
     article {
       width: min(100%, 54rem);
       margin-inline: auto;

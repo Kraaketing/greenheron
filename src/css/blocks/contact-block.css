@@ -19,7 +19,7 @@
   }
 
   input::placeholder {
-    color: var(--four);
+    color: var(--three);
   }
 
   input:not(input[type="submit"]) {
