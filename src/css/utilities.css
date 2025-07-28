@@ -131,6 +131,14 @@ h1,
   fill: var(--one);
 }
 
+.svg-line--static {
+  fill: var(--green-black);
+}
+
+.svg-elipse--static {
+  fill: var(--orange-bright);
+}
+
 .round-image {
   border-radius: 50%;
   width: 100%;
