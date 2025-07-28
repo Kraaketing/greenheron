@@ -19,14 +19,14 @@
   );
 }
 
-p, ul, ol , a, span, details, label, input, textarea {
-  font-size: clamp(1.2rem, 1rem + 2vw, 1.8rem);
-}
-
 .period {
   color: var(--orange-bright);
   margin-right: 0.3rem;
   line-height: 0;
+}
+
+p, ul, ol , a, span, details, label, input, textarea {
+  font-size: clamp(1.2rem, 1rem + 2vw, 1.8rem);
 }
 
 .footnote {
