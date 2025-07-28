@@ -119,6 +119,18 @@ h1,
   user-select: none;
 }
 
+.svg-line {
+  fill: var(--two);
+}
+
+.svg-elipse {
+  fill: var(--three);
+}
+
+.svg-invert {
+  fill: var(--one);
+}
+
 .round-image {
   border-radius: 50%;
   width: 100%;
