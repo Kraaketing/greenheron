@@ -6,6 +6,11 @@
       name="description"
       content="Custom-designed, low-impact websites from Green Heron Design. Built with minimal, efficient code and hosted on eco-friendly servers for a more sustainable web."
     />
+    <meta property="og:title" content="{{ title or 'Green Heron Design' }}" />
+    <meta property="og:description" content="Custom-designed, low-impact websites from Green Heron Design. Built with minimal, efficient code and hosted on eco-friendly servers for a more sustainable web." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://greenheron.design{{ page.url or '' }}" />
+    <meta property="og:site_name" content="Green Heron Design" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/svg+xml" href="/monogramdot.svg" />
     <title>{{ title }}</title>
