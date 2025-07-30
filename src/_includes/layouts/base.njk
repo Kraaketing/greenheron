@@ -7,74 +7,82 @@
       content="Custom-designed, low-impact websites from Green Heron Design. Built with minimal, efficient code and hosted on eco-friendly servers for a more sustainable web."
     />
     <meta property="og:title" content="{{ title or 'Green Heron Design' }}" />
-    <meta property="og:description" content="Custom-designed, low-impact websites from Green Heron Design. Built with minimal, efficient code and hosted on eco-friendly servers for a more sustainable web." />
+    <meta
+      property="og:description"
+      content="Custom-designed, low-impact websites from Green Heron Design. Built with minimal, efficient code and hosted on eco-friendly servers for a more sustainable web."
+    />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://greenheron.design{{ page.url or '' }}" />
+    <meta
+      property="og:url"
+      content="https://greenheron.design{{ page.url or '' }}"
+    />
     <meta property="og:site_name" content="Green Heron Design" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/svg+xml" href="/monogramdot.svg" />
     <title>{{ title }}</title>
     <link rel="stylesheet" href="/styles.css" />
     <script>
-// Apply theme
-function getCurrentTheme() {
-  const savedTheme = localStorage.getItem('theme-preference');
-  if (savedTheme) {
-    return savedTheme;
-  }
-  return window.matchMedia("(prefers-color-scheme: dark)").matches ? 'dark' : 'light';
-}
+      // Apply theme
+      function getCurrentTheme() {
+        const savedTheme = localStorage.getItem("theme-preference");
+        if (savedTheme) {
+          return savedTheme;
+        }
+        return window.matchMedia("(prefers-color-scheme: dark)").matches
+          ? "dark"
+          : "light";
+      }
 
-function applyTheme(theme) {
-  const body = document.body;
-  const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)");
-  
-  body.classList.remove('light-theme', 'dark-theme');
-  
-  if (theme === 'light' && prefersDarkScheme.matches) {
-    body.classList.add('light-theme');
-  } else if (theme === 'dark' && !prefersDarkScheme.matches) {
-    body.classList.add('dark-theme');
-  }
-}
-</script>
+      function applyTheme(theme) {
+        const body = document.body;
+        const prefersDarkScheme = window.matchMedia(
+          "(prefers-color-scheme: dark)"
+        );
+
+        body.classList.remove("light-theme", "dark-theme");
+
+        if (theme === "light" && prefersDarkScheme.matches) {
+          body.classList.add("light-theme");
+        } else if (theme === "dark" && !prefersDarkScheme.matches) {
+          body.classList.add("dark-theme");
+        }
+      }
+    </script>
   </head>
   <body class="c-screen-height c-flex c-flex-center" id="top">
     <script>
-applyTheme(getCurrentTheme());
-</script>
-        {% include "components/header.njk" %}
-      <main class="c-flex c-flex-center">
-        {% if content %}
-        <section class="container-width-narrow | info">
-          {{ content | safe }}
-        </section>
-        {% endif %}
+      applyTheme(getCurrentTheme());
+    </script>
+    {% include "components/header.njk" %}
+    <main class="c-flex c-flex-center">
+      {% if content %}
+      <section class="container-width-narrow | info">
+        {{ content | safe }}
+      </section>
+      {% endif %} 
+      
+      {% if blocks %} 
+      {% for block in blocks %} 
+      {% if block.type ==  "hero" %} 
+      {% include "blocks/hero.njk" %} 
+      
+      {% elif block.type == "intro" %}
+      {% include "blocks/intro.njk" %} 
+      
+      {% elif block.type == "mountainwave" %}
+      {% include "blocks/mountainwave.njk" %} 
+      
+      {% elif block.type == "testimonials" %} 
+      {% include "blocks/testimonials.njk" %} 
 
+      {% elif block.type == "contact-block" %} 
+      {% include "blocks/contact-block.njk" %}
 
-        {% if blocks %} {% for block in blocks %} 
-
-        {% if block.type == "hero" %}
-        {% include "blocks/hero.njk" %} 
-
-        {% elif block.type == "intro" %} 
-        {% include "blocks/intro.njk" %} 
-
-        {% elif block.type == "mountainwave" %} 
-        {% include "blocks/mountainwave.njk" %} 
-
-        {% elif block.type == "testimonials" %} 
-        {% include "blocks/testimonials.njk" %} 
-
-        {% elif block.type == "contact-block" %} 
-        {% include "blocks/contact-block.njk" %} 
-
-        {% elif block.type == "sent" %} 
-        {% include "blocks/sent.njk" %} 
-        {% endif %} 
-        {% endfor %}
-        {% endif %}
-      </main>
+      {% elif block.type == "sent" %} 
+      {% include "blocks/sent.njk" %} 
+      
+      {% endif %} {% endfor %} {% endif %}
+    </main>
     {% include "components/footer.njk" %}
     <!-- <script>
       const buttons = document.querySelectorAll(".ball");
@@ -93,24 +101,26 @@ applyTheme(getCurrentTheme());
       });
     </script> -->
     <script>
-// The rest of the functionality
-function toggleTheme() {
-  const currentTheme = getCurrentTheme();
-  const newTheme = currentTheme === 'light' ? 'dark' : 'light';
-  localStorage.setItem('theme-preference', newTheme);
-  applyTheme(newTheme);
-}
+      // The rest of the functionality
+      function toggleTheme() {
+        const currentTheme = getCurrentTheme();
+        const newTheme = currentTheme === "light" ? "dark" : "light";
+        localStorage.setItem("theme-preference", newTheme);
+        applyTheme(newTheme);
+      }
 
-const buttons = document.querySelectorAll(".ball");
-buttons.forEach(btn => {
-  btn.addEventListener("click", toggleTheme);
-});
+      const buttons = document.querySelectorAll(".ball");
+      buttons.forEach((btn) => {
+        btn.addEventListener("click", toggleTheme);
+      });
 
-window.matchMedia("(prefers-color-scheme: dark)").addEventListener('change', function() {
-  if (!localStorage.getItem('theme-preference')) {
-    applyTheme(getCurrentTheme());
-  }
-});
-</script>
+      window
+        .matchMedia("(prefers-color-scheme: dark)")
+        .addEventListener("change", function () {
+          if (!localStorage.getItem("theme-preference")) {
+            applyTheme(getCurrentTheme());
+          }
+        });
+    </script>
   </body>
 </html>
