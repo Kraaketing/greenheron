@@ -84,22 +84,6 @@
       {% endif %} {% endfor %} {% endif %}
     </main>
     {% include "components/footer.njk" %}
-    <!-- <script>
-      const buttons = document.querySelectorAll(".ball");
-      const prefersDarkScheme = window.matchMedia(
-        "(prefers-color-scheme: dark)"
-      );
-
-      buttons.forEach((btn) => {
-        btn.addEventListener("click", function () {
-          if (prefersDarkScheme.matches) {
-            document.body.classList.toggle("light-theme");
-          } else {
-            document.body.classList.toggle("dark-theme");
-          }
-        });
-      });
-    </script> -->
     <script>
       // The rest of the functionality
       function toggleTheme() {

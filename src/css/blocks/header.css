@@ -25,7 +25,8 @@ header {
     }
   }
   .head-left,
-  .head-right {
+  .head-right,
+  .ball {
     margin: 0 min(5vw, 2rem);
   }
   a,
