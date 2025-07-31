@@ -15,7 +15,7 @@
       color: var(--orange-bright);
     }
     article {
-      width: min(100%, 54rem);
+      /* width: min(100%, 54rem); */
       margin-inline: auto;
       .squiggle {
         width: clamp(19rem, 78vw, 52rem);
@@ -35,6 +35,8 @@
       }
       p {
         padding-bottom: 1em;
+      }
+      p:nth-child(3) {
         text-indent: max(2.5rem, 9%);
       }
       a {
@@ -44,7 +46,7 @@
         .squiggle{
           margin-left: clamp(-7rem, -8vw, -2.1rem);;
         }
-        p,
+        p:nth-child(3),
         h2{
           text-indent: 0;
         }
