@@ -6,7 +6,7 @@
       name="description"
       content="Custom-designed, low-impact websites from Green Heron Design. Built with minimal, efficient code and hosted on eco-friendly servers for a more sustainable web."
     />
-    <meta property="og:title" content="{{ title or 'Green Heron Design' }}" />
+    <meta property="og:title" content="{{ title or 'Green Heron Web Design' }}" />
     <meta
       property="og:description"
       content="Custom-designed, low-impact websites from Green Heron Design. Built with minimal, efficient code and hosted on eco-friendly servers for a more sustainable web."
@@ -16,9 +16,31 @@
       property="og:url"
       content="https://greenheron.design{{ page.url or '' }}"
     />
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Green Heron Web Design",
+  "url": "https://greenheron.design",
+  "logo": "https://greenheron.design/monogramdot.svg",
+  "description": "Custom-designed, low-impact websites built with minimal, efficient code and hosted on eco-friendly servers for a more sustainable web.",
+  "founder": {
+    "@type": "Person",
+    "name": "Jørgen N. Bjørnstad"
+  },
+  "areaServed": "Europe",
+  "address": {
+  "@type": "PostalAddress", 
+  "addressCountry": "PT"
+  }
+  "serviceType": "Web Design and Development",
+  "specialty": "Sustainable Web Development"
+}
+</script>
     <meta property="og:site_name" content="Green Heron Design" />
+    <meta property="og:image" content="https://greenheron.design/logo.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/svg+xml" href="/monogramdot.svg" />
+    <link rel="icon" type="image/svg+xml" href="/logo.svg" />
     <title>{{ title }}</title>
     <link rel="stylesheet" href="/styles.css" />
     <script>
