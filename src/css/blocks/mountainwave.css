@@ -39,6 +39,7 @@ height: clamp(10rem, 30vw, 45rem);
   .mountain-e {
     fill: var(--green-dark);
   }
+
   .ball {
     margin-left: 15%;
     margin-bottom: -1%;
