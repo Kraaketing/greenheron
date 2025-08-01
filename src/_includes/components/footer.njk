@@ -1,19 +1,20 @@
 <footer class="standard-container">
   {% if page.url == "/" %}
-    <figure>
-        {% include "svg/chunky-monogram-dot.njk" %}
-    </figure>
+    <a href="#top">
+      {% include "svg/chunky-monogram-dot.njk" %}
+    </a>
   {% else %}
     <a href="/">
-        {% include "svg/chunky-monogram-dot.njk" %}
+      {% include "svg/chunky-monogram-dot.njk" %}
     </a>
-  {% endif %}  <span>
-  <script>
-    document.write(new Date().getFullYear());
-  </script>
+  {% endif %}
+  <span>
+    <script>
+      document.write(new Date().getFullYear());
+    </script>
   </span>
   <div class="legal-links">
-      <a class="footnote" href="/privacy-policy">Privacy Policy</a>
-      <a class="footnote" href="/terms-and-conditions">Terms and Conditions</a>
-    </div>
+    <a class="footnote" href="/privacy-policy">Privacy Policy</a>
+    <a class="footnote" href="/terms-and-conditions">Terms and Conditions</a>
+  </div>
 </footer>

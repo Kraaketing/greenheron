@@ -1,6 +1,10 @@
 .info {
-    margin-top: 2rem;
-    h2{
-        margin-top: 1.3em;
-    }
+  margin-top: 2rem;
+  h1 {
+    color: var(--two);
+    font-size: clamp(2rem, 2rem + 4vw, 6.2rem);
+  }
+  h2 {
+    margin-top: 1.3em;
+  }
 }

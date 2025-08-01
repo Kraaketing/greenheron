@@ -6,7 +6,10 @@
       name="description"
       content="Custom-designed, low-impact websites from Green Heron Design. Built with minimal, efficient code and hosted on eco-friendly servers for a more sustainable web."
     />
-    <meta property="og:title" content="{{ title or 'Green Heron Web Design' }}" />
+    <meta
+      property="og:title"
+      content="{{ title or 'Green Heron Web Design' }}"
+    />
     <meta
       property="og:description"
       content="Custom-designed, low-impact websites from Green Heron Design. Built with minimal, efficient code and hosted on eco-friendly servers for a more sustainable web."
@@ -17,26 +20,26 @@
       content="https://greenheron.design{{ page.url or '' }}"
     />
     <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  "name": "Green Heron Web Design",
-  "url": "https://greenheron.design",
-  "logo": "https://greenheron.design/monogramdot.svg",
-  "description": "Custom-designed, low-impact websites built with minimal, efficient code and hosted on eco-friendly servers for a more sustainable web.",
-  "founder": {
-    "@type": "Person",
-    "name": "Jørgen N. Bjørnstad"
-  },
-  "areaServed": "Europe",
-  "address": {
-  "@type": "PostalAddress", 
-  "addressCountry": "PT"
-  }
-  "serviceType": "Web Design and Development",
-  "specialty": "Sustainable Web Development"
-}
-</script>
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Green Heron Web Design",
+        "url": "https://greenheron.design",
+        "logo": "https://greenheron.design/monogramdot.svg",
+        "description": "Custom-designed, low-impact websites built with minimal, efficient code and hosted on eco-friendly servers for a more sustainable web.",
+        "founder": {
+          "@type": "Person",
+          "name": "Jørgen N. Bjørnstad"
+        },
+        "areaServed": "Europe",
+        "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "PT"
+        }
+        "serviceType": "Web Design and Development",
+        "specialty": "Sustainable Web Development"
+      }
+    </script>
     <meta property="og:site_name" content="Green Heron Design" />
     <meta property="og:image" content="https://greenheron.design/logo.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -85,7 +88,9 @@
       
       {% if blocks %} 
       {% for block in blocks %} 
-      {% if block.type ==  "hero" %} 
+      
+      {% if block.type ==
+      "hero" %} 
       {% include "blocks/hero.njk" %} 
       
       {% elif block.type == "intro" %}
@@ -96,14 +101,15 @@
       
       {% elif block.type == "testimonials" %} 
       {% include "blocks/testimonials.njk" %} 
-
+      
       {% elif block.type == "contact-block" %} 
       {% include "blocks/contact-block.njk" %}
-
+      
       {% elif block.type == "sent" %} 
       {% include "blocks/sent.njk" %} 
       
-      {% endif %} {% endfor %} {% endif %}
+      {% endif
+      %} {% endfor %} {% endif %}
     </main>
     {% include "components/footer.njk" %}
     <script>
@@ -128,50 +134,53 @@
           }
         });
     </script>
-        <script>
-        // Parallax scroll effect
-        function handleScroll() {
-  const parallaxContainer = document.getElementById('parallax-mountains');
-  if (!parallaxContainer) return;
-  
-  const containerRect = parallaxContainer.getBoundingClientRect();
-  const containerTop = containerRect.top;
-  const containerBottom = containerRect.bottom;
-  const windowHeight = window.innerHeight;
-  
-  if (containerBottom >= 0 && containerTop <= windowHeight) {
-    const scrollProgress = Math.max(0, windowHeight - containerTop) / (windowHeight + containerRect.height);
-    const layers = parallaxContainer.querySelectorAll('.mountain-layer');
-    
-    // Scale effect based on viewport width - more dramatic on wider screens
-    const viewportWidth = window.innerWidth;
-    const baseMultiplier = 200;
-    const widthMultiplier = Math.max(1, viewportWidth / 1200); // Increases effect on screens wider than 1200px
-    
-    layers.forEach(layer => {
-      const speed = parseFloat(layer.dataset.speed);
-      const translateY = scrollProgress * speed * baseMultiplier * widthMultiplier;
-      layer.style.transform = `translateY(${translateY}px)`;
-    });
-  }
-}
+    <script>
+      // Parallax scroll effect
+      function handleScroll() {
+        const parallaxContainer = document.getElementById("parallax-mountains");
+        if (!parallaxContainer) return;
 
-        // Throttled scroll handler for better performance
-        let ticking = false;
-        function requestTick() {
-            if (!ticking) {
-                requestAnimationFrame(handleScroll);
-                ticking = true;
-            }
+        const containerRect = parallaxContainer.getBoundingClientRect();
+        const containerTop = containerRect.top;
+        const containerBottom = containerRect.bottom;
+        const windowHeight = window.innerHeight;
+
+        if (containerBottom >= 0 && containerTop <= windowHeight) {
+          const scrollProgress =
+            Math.max(0, windowHeight - containerTop) /
+            (windowHeight + containerRect.height);
+          const layers = parallaxContainer.querySelectorAll(".mountain-layer");
+
+          // Scale effect based on viewport width - more dramatic on wider screens
+          const viewportWidth = window.innerWidth;
+          const baseMultiplier = 200;
+          const widthMultiplier = Math.max(1, viewportWidth / 1200); // Increases effect on screens wider than 1200px
+
+          layers.forEach((layer) => {
+            const speed = parseFloat(layer.dataset.speed);
+            const translateY =
+              scrollProgress * speed * baseMultiplier * widthMultiplier;
+            layer.style.transform = `translateY(${translateY}px)`;
+          });
         }
+      }
 
-        window.addEventListener('scroll', () => {
-            ticking = false;
-            requestTick();
-        });
+      // Throttled scroll handler for better performance
+      let ticking = false;
+      function requestTick() {
+        if (!ticking) {
+          requestAnimationFrame(handleScroll);
+          ticking = true;
+        }
+      }
 
-        // Initial call
-        handleScroll();
+      window.addEventListener("scroll", () => {
+        ticking = false;
+        requestTick();
+      });
+
+      // Initial call
+      handleScroll();
     </script>
   </body>
 </html>
