@@ -1,5 +1,9 @@
 .ground {
   width: 100%;
+  .blaane {
+    width: 100%;
+    max-height: 20rem;
+  }
   .ball {
     margin-left: 15%;
     margin-bottom: -1%;
@@ -21,17 +25,17 @@
         width: clamp(19rem, 78vw, 52rem);
         /* margin-left: clamp(-7rem, -8vw, -2.1rem); */
         margin-bottom: clamp(-2.9rem, -5vw, -1.8rem);
-        margin-left: 0; 
+        margin-left: 0;
       }
       h2,
-      p, 
+      p,
       ul {
         color: white;
       }
       h2 {
         font-size: clamp(2.3rem, 9vw, 6.2rem);
         margin: 0 0 -1em;
-        text-indent: 11%; 
+        text-indent: 11%;
       }
       p {
         padding-bottom: 1em;
@@ -43,11 +47,11 @@
         color: var(--orange-bright);
       }
       @media screen and (min-width: 65rem) {
-        .squiggle{
-          margin-left: clamp(-7rem, -8vw, -2.1rem);;
+        .squiggle {
+          margin-left: clamp(-7rem, -8vw, -2.1rem);
         }
         p:nth-child(3),
-        h2{
+        h2 {
           text-indent: 0;
         }
       }
