@@ -1,8 +1,43 @@
 .ground {
   width: 100%;
-  .blaane {
+  /* Parallax container */
+  .parallax-mountains {
+    position: relative;
     width: 100%;
-    max-height: 20rem;
+height: clamp(10rem, 30vw, 45rem);
+    overflow: hidden;
+  }
+
+  /* Individual mountain layers */
+  .mountain-layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .mountain-layer svg {
+    width: 100%;
+    height: 100%;
+    display: block;
+  }
+
+  /* Color classes for CSS control */
+  .mountain-a {
+    fill: url(#gradientA);
+  }
+  .mountain-b {
+    fill: url(#gradientB);
+  }
+  .mountain-c {
+    fill: url(#gradientC);
+  }
+  .mountain-d {
+    fill: url(#gradientD);
+  }
+  .mountain-e {
+    fill: var(--green-dark);
   }
   .ball {
     margin-left: 15%;

@@ -13,12 +13,28 @@
   --orange-white: oklch(0.9859 0.0288 42.84);
   --pink: oklch(0.7054 0.2562 3.43);
   --blue-dark: oklch(0.2221 0.062 235.7);
+  --mountain-a-start: oklch(0.9287 0.0357 249.52);
+  --mountain-a-end: oklch(0.9836 0.016 206.44);
+  --mountain-b-start: oklch(0.825 0.1025 243.84);
+  --mountain-b-end: oklch(0.9363 0.0563 210.15);
+  --mountain-c-start: oklch(0.6705 0.1936 252.32);
+  --mountain-c-end: oklch(0.9448 0.0935 190.19);
+  --mountain-d-start: oklch(0.5484 0.124 239.23);
+  --mountain-d-end: oklch(0.7651 0.1811 217.0404);
 
   @media (prefers-color-scheme: dark) {
     --one: oklch(0.2221 0.062 235.7);
     --two: oklch(0.9859 0.0288 42.84);
     --three: oklch(0.5668 0.2265 11.57);
     --four: oklch(0.5668 0.2265 11.57);
+    --mountain-a-start: oklch(8.848% 0.06132 264.073);
+    --mountain-a-end: oklch(8.848% 0.06132 264.073);
+    --mountain-b-start: oklch(10.658% 0.01976 222.441);
+    --mountain-b-end: oklch(24.246% 0.04204 210.697);
+    --mountain-c-start: oklch(17.555% 0.04334 244.057);
+    --mountain-c-end: oklch(37.887% 0.0657 188.839);
+    --mountain-d-start: oklch(30.124% 0.06562 162.483);
+    --mountain-d-end: oklch(29.348% 0.05583 174.027);
   }
 }
 
@@ -27,6 +43,14 @@ body.light-theme {
   --two: oklch(0.2658 0.0821 160.09);
   --three: oklch(0.7867 0.1741 50.56);
   --four: oklch(0.9859 0.0288 42.84 /60%);
+  --mountain-a-start: oklch(0.9287 0.0357 249.52);
+  --mountain-a-end: oklch(0.9836 0.016 206.44);
+  --mountain-b-start: oklch(0.825 0.1025 243.84);
+  --mountain-b-end: oklch(0.9363 0.0563 210.15);
+  --mountain-c-start: oklch(0.6705 0.1936 252.32);
+  --mountain-c-end: oklch(0.9448 0.0935 190.19);
+  --mountain-d-start: oklch(0.5484 0.124 239.23);
+  --mountain-d-end: oklch(0.7651 0.1811 217.0404);
 }
 
 body.dark-theme {
@@ -34,6 +58,14 @@ body.dark-theme {
   --two: oklch(0.9859 0.0288 42.84);
   --three: oklch(0.5668 0.2265 11.57);
   --four: oklch(0.5668 0.2265 11.57);
+  --mountain-a-start: oklch(8.848% 0.06132 264.073);
+  --mountain-a-end: oklch(8.848% 0.06132 264.073);
+  --mountain-b-start: oklch(10.658% 0.01976 222.441);
+  --mountain-b-end: oklch(24.246% 0.04204 210.697);
+  --mountain-c-start: oklch(17.555% 0.04334 244.057);
+  --mountain-c-end: oklch(37.887% 0.0657 188.839);
+  --mountain-d-start: oklch(30.124% 0.06562 162.483);
+  --mountain-d-end: oklch(29.348% 0.05583 174.027);
 }
 
 .period {
@@ -130,7 +162,9 @@ h3,
   fill: var(--orange-bright);
 }
 
-.svg-line, .svg-elipse, .svg-invert {
+.svg-line,
+.svg-elipse,
+.svg-invert {
   transition: fill 3s ease;
 }
 
@@ -139,4 +173,3 @@ h3,
   width: 100%;
   height: auto;
 }
-
