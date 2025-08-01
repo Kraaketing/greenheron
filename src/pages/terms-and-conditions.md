@@ -125,7 +125,7 @@ If any provision of these Terms is found to be unenforceable, the remaining prov
 For questions about these Terms, please contact us:
 
 **Green Heron**  
-Email: [contact@green-heron.design](contact@green-heron.design)    
+Email: [hei@green-heron.design](hei@green-heron.design)    
 
 ---  
 
