@@ -116,7 +116,7 @@
     </main>
     {% include "components/footer.njk" %}
     <script>
-      // The rest of the functionality
+      // Dark/light theme cont.
       function toggleTheme() {
         const currentTheme = getCurrentTheme();
         const newTheme = currentTheme === "light" ? "dark" : "light";
@@ -137,53 +137,58 @@
           }
         });
     </script>
-    <script>
-      // Parallax scroll effect
-      function handleScroll() {
-        const parallaxContainer = document.getElementById("parallax-mountains");
-        if (!parallaxContainer) return;
+<script>
+// Parallax scroll effect
+function handleScroll() {
+  const parallaxContainer = document.getElementById('parallax-mountains');
+  if (!parallaxContainer) return;
+  
+  const containerRect = parallaxContainer.getBoundingClientRect();
+  const containerTop = containerRect.top;
+  const containerBottom = containerRect.bottom;
+  const windowHeight = window.innerHeight;
+  
+  if (containerBottom >= 0 && containerTop <= windowHeight) {
+    const scrollProgress = Math.max(0, windowHeight - containerTop) / (windowHeight + containerRect.height);
+    const layers = parallaxContainer.querySelectorAll('.mountain-layer');
+    
+    // Scale effect based on viewport width
+    const viewportWidth = window.innerWidth;
+    const baseMultiplier = 200;
+    const widthMultiplier = Math.max(1, viewportWidth / 1200);
+    
+    layers.forEach(layer => {
+      const speed = parseFloat(layer.dataset.speed);
+      const translateY = scrollProgress * speed * baseMultiplier * widthMultiplier;
+      layer.style.transform = `translateY(${translateY}px)`;
+    });
+  }
+}
 
-        const containerRect = parallaxContainer.getBoundingClientRect();
-        const containerTop = containerRect.top;
-        const containerBottom = containerRect.bottom;
-        const windowHeight = window.innerHeight;
+let ticking = false;
+function requestTick() {
+  if (!ticking) {
+    requestAnimationFrame(handleScroll);
+    ticking = true;
+  }
+}
 
-        if (containerBottom >= 0 && containerTop <= windowHeight) {
-          const scrollProgress =
-            Math.max(0, windowHeight - containerTop) /
-            (windowHeight + containerRect.height);
-          const layers = parallaxContainer.querySelectorAll(".mountain-layer");
+// Listen for scroll events
+window.addEventListener('scroll', () => {
+  ticking = false;
+  requestTick();
+});
 
-          // Scale effect based on viewport width - more dramatic on wider screens
-          const viewportWidth = window.innerWidth;
-          const baseMultiplier = 200;
-          const widthMultiplier = Math.max(1, viewportWidth / 1200); // Increases effect on screens wider than 1200px
+// Listen for details toggle events
+document.querySelectorAll('details').forEach(details => {
+  details.addEventListener('toggle', () => {
+    ticking = false;
+    requestTick();
+  });
+});
 
-          layers.forEach((layer) => {
-            const speed = parseFloat(layer.dataset.speed);
-            const translateY =
-              scrollProgress * speed * baseMultiplier * widthMultiplier;
-            layer.style.transform = `translateY(${translateY}px)`;
-          });
-        }
-      }
-
-      // Throttled scroll handler for better performance
-      let ticking = false;
-      function requestTick() {
-        if (!ticking) {
-          requestAnimationFrame(handleScroll);
-          ticking = true;
-        }
-      }
-
-      window.addEventListener("scroll", () => {
-        ticking = false;
-        requestTick();
-      });
-
-      // Initial call
-      handleScroll();
-    </script>
+// Initial call
+handleScroll();
+</script>
   </body>
 </html>
