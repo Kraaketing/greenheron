@@ -1,0 +1,27 @@
+    <script>
+      // Apply theme
+      function getCurrentTheme() {
+        const savedTheme = localStorage.getItem("theme-preference");
+        if (savedTheme) {
+          return savedTheme;
+        }
+        return window.matchMedia("(prefers-color-scheme: dark)").matches
+          ? "dark"
+          : "light";
+      }
+
+      function applyTheme(theme) {
+        const body = document.body;
+        const prefersDarkScheme = window.matchMedia(
+          "(prefers-color-scheme: dark)"
+        );
+
+        body.classList.remove("light-theme", "dark-theme");
+
+        if (theme === "light" && prefersDarkScheme.matches) {
+          body.classList.add("light-theme");
+        } else if (theme === "dark" && !prefersDarkScheme.matches) {
+          body.classList.add("dark-theme");
+        }
+      }
+    </script>

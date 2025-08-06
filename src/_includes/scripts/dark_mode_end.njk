@@ -1,0 +1,22 @@
+    <script>
+      // Dark/light theme cont.
+      function toggleTheme() {
+        const currentTheme = getCurrentTheme();
+        const newTheme = currentTheme === "light" ? "dark" : "light";
+        localStorage.setItem("theme-preference", newTheme);
+        applyTheme(newTheme);
+      }
+
+      const buttons = document.querySelectorAll(".ball");
+      buttons.forEach((btn) => {
+        btn.addEventListener("click", toggleTheme);
+      });
+
+      window
+        .matchMedia("(prefers-color-scheme: dark)")
+        .addEventListener("change", function () {
+          if (!localStorage.getItem("theme-preference")) {
+            applyTheme(getCurrentTheme());
+          }
+        });
+    </script>

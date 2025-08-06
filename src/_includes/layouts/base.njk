@@ -2,23 +2,11 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta
-      name="description"
-      content="Sustainable web pages designed and developed with love and creativity in Portugal, for a greener web."
-    />
-    <meta
-      property="og:title"
-      content="{{ title or 'Green Heron Web Design' }}"
-    />
-    <meta
-      property="og:description"
-      content="Sustainable web pages designed and developed with love and creativity in Portugal, for a greener web."
-    />
+    <meta name="description" content="Sustainable web pages designed and developed with love and creativity in Portugal, for a greener web."/>
+    <meta property="og:title" content="{{ title or 'Green Heron Web Design' }}"/>
+    <meta property="og:description" content="Sustainable web pages designed and developed with love and creativity in Portugal, for a greener web."/>
     <meta property="og:type" content="website" />
-    <meta
-      property="og:url"
-      content="https://greenheron.design{{ page.url or '' }}"
-    />
+    <meta property="og:url" content="https://greenheron.design{{ page.url or '' }}"/>
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -49,33 +37,7 @@
     <link rel="icon" type="image/svg+xml" href="/logo.svg" />
     <title>{{ title }}</title>
     <link rel="stylesheet" href="/styles.css" />
-    <script>
-      // Apply theme
-      function getCurrentTheme() {
-        const savedTheme = localStorage.getItem("theme-preference");
-        if (savedTheme) {
-          return savedTheme;
-        }
-        return window.matchMedia("(prefers-color-scheme: dark)").matches
-          ? "dark"
-          : "light";
-      }
-
-      function applyTheme(theme) {
-        const body = document.body;
-        const prefersDarkScheme = window.matchMedia(
-          "(prefers-color-scheme: dark)"
-        );
-
-        body.classList.remove("light-theme", "dark-theme");
-
-        if (theme === "light" && prefersDarkScheme.matches) {
-          body.classList.add("light-theme");
-        } else if (theme === "dark" && !prefersDarkScheme.matches) {
-          body.classList.add("dark-theme");
-        }
-      }
-    </script>
+    {% include "scripts/dark_mode_start.njk" %}
   </head>
   <body class="c-screen-height c-flex c-flex-center" id="top">
     <script>
@@ -84,111 +46,35 @@
     {% include "components/header.njk" %}
     <main class="c-flex c-flex-center">
       {% if content %}
-      <section class="container-width-narrow | info">
+      <section class="container-width-narrow | info" aria-label="Information">
         {{ content | safe }}
       </section>
       {% endif %} 
       
       {% if blocks %} 
-      {% for block in blocks %} 
-      
-      {% if block.type ==
-      "hero" %} 
-      {% include "blocks/hero.njk" %} 
-      
-      {% elif block.type == "intro" %}
-      {% include "blocks/intro.njk" %} 
-      
-      {% elif block.type == "mountainwave" %}
-      {% include "blocks/mountainwave.njk" %} 
-      
-      {% elif block.type == "testimonials" %} 
-      {% include "blocks/testimonials.njk" %} 
-      
-      {% elif block.type == "contact-block" %} 
-      {% include "blocks/contact-block.njk" %}
-      
-      {% elif block.type == "sent" %} 
-      {% include "blocks/sent.njk" %} 
-      
-      {% endif
-      %} {% endfor %} {% endif %}
+        {% set needsParallax = false %}
+        {% for block in blocks %} 
+          {% if block.type == "hero" %} 
+            {% include "blocks/hero.njk" %} 
+          {% elif block.type == "intro" %}
+            {% include "blocks/intro.njk" %} 
+          {% elif block.type == "mountainwave" %}
+            {% include "blocks/mountainwave.njk" %} 
+            {% set needsParallax = true %}
+          {% elif block.type == "testimonials" %} 
+            {% include "blocks/testimonials.njk" %} 
+          {% elif block.type == "contact-block" %} 
+            {% include "blocks/contact-block.njk" %}
+          {% elif block.type == "sent" %} 
+            {% include "blocks/sent.njk" %} 
+          {% endif %} 
+        {% endfor %} 
+      {% endif %}
     </main>
     {% include "components/footer.njk" %}
-    <script>
-      // Dark/light theme cont.
-      function toggleTheme() {
-        const currentTheme = getCurrentTheme();
-        const newTheme = currentTheme === "light" ? "dark" : "light";
-        localStorage.setItem("theme-preference", newTheme);
-        applyTheme(newTheme);
-      }
-
-      const buttons = document.querySelectorAll(".ball");
-      buttons.forEach((btn) => {
-        btn.addEventListener("click", toggleTheme);
-      });
-
-      window
-        .matchMedia("(prefers-color-scheme: dark)")
-        .addEventListener("change", function () {
-          if (!localStorage.getItem("theme-preference")) {
-            applyTheme(getCurrentTheme());
-          }
-        });
-    </script>
-<script>
-// Parallax scroll effect
-function handleScroll() {
-  const parallaxContainer = document.getElementById('parallax-mountains');
-  if (!parallaxContainer) return;
-  
-  const containerRect = parallaxContainer.getBoundingClientRect();
-  const containerTop = containerRect.top;
-  const containerBottom = containerRect.bottom;
-  const windowHeight = window.innerHeight;
-  
-  if (containerBottom >= 0 && containerTop <= windowHeight) {
-    const scrollProgress = Math.max(0, windowHeight - containerTop) / (windowHeight + containerRect.height);
-    const layers = parallaxContainer.querySelectorAll('.mountain-layer');
-    
-    // Scale effect based on viewport width
-    const viewportWidth = window.innerWidth;
-    const baseMultiplier = 200;
-    const widthMultiplier = Math.max(1, viewportWidth / 1200);
-    
-    layers.forEach(layer => {
-      const speed = parseFloat(layer.dataset.speed);
-      const translateY = scrollProgress * speed * baseMultiplier * widthMultiplier;
-      layer.style.transform = `translateY(${translateY}px)`;
-    });
-  }
-}
-
-let ticking = false;
-function requestTick() {
-  if (!ticking) {
-    requestAnimationFrame(handleScroll);
-    ticking = true;
-  }
-}
-
-// Listen for scroll events
-window.addEventListener('scroll', () => {
-  ticking = false;
-  requestTick();
-});
-
-// Listen for details toggle events
-document.querySelectorAll('details').forEach(details => {
-  details.addEventListener('toggle', () => {
-    ticking = false;
-    requestTick();
-  });
-});
-
-// Initial call
-handleScroll();
-</script>
-  </body>
+    {% include "scripts/dark_mode_end.njk" %}
+    {% if needsParallax %}
+      {% include "scripts/parallax.njk" %}
+    {% endif %}  
+</body>
 </html>
