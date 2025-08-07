@@ -47,15 +47,15 @@ components:
         fields:
           - name: paragraphs
             label: Introduction Paragraphs
-            type: array
-            fields:
-              - { type: rich-text }
+            type: rich-text
+            list: true
           - { name: workingTitle, label: Working Section Title, type: string }
           - { name: workingIntro, label: Working Section Intro, type: rich-text }
           - { name: workingInstructions, label: Instructions Text, type: string }
           - name: details
             label: Service Details
-            type: array
+            type: object
+            list: true
             fields:
               - { name: title, label: Detail Title, type: string }
               - { name: content, label: Detail Content, type: rich-text }
@@ -71,9 +71,8 @@ components:
           - { name: contactTitle, label: Contact Section Title, type: string }
           - name: paragraphs
             label: Contact Paragraphs
-            type: array
-            fields:
-              - { type: rich-text }
+            type: rich-text
+            list: true
 
   testimonials_block:
     label: Testimonials Section
@@ -87,13 +86,13 @@ components:
           - { name: description, label: Testimonials Description, type: rich-text }
           - name: testimonials
             label: Testimonial Items
-            type: array
+            type: object
+            list: true
             fields:
               - { name: name, label: Person Name, type: string }
               - { name: company, label: Company Name, type: string }
               - { name: image, label: Image Path, type: string }
               - name: paragraphs
                 label: Testimonial Paragraphs
-                type: array
-                fields:
-                  - { type: rich-text }
+                type: rich-text
+                list: true
