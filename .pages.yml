@@ -1,0 +1,98 @@
+# PagesCMS Configuration for Green Heron
+media:
+  input: src/static
+  output: /static
+
+content:
+  - name: index
+    label: Home Page
+    type: file
+    path: src/pages/index.md
+    fields:
+      - { name: title, label: Title, type: string }
+      - { name: layout, type: string, hidden: true, default: "layouts/base.njk" }
+      - { name: permalink, type: string, hidden: true, default: "/" }
+      - name: blocks
+        label: Page Blocks
+        type: block
+        list: true
+        blockKey: type
+        blocks:
+          - name: hero
+            label: Hero Section
+            component: hero_block
+          - name: intro
+            label: Introduction Section
+            component: intro_block
+          - name: mountainwave
+            label: Contact Section
+            component: mountainwave_block
+          - name: testimonials
+            label: Testimonials Section
+            component: testimonials_block
+
+components:
+  hero_block:
+    label: Hero Section
+    type: object
+    fields: []
+
+  intro_block:
+    label: Introduction Section
+    type: object
+    fields:
+      - name: content
+        label: Content
+        type: object
+        fields:
+          - name: paragraphs
+            label: Introduction Paragraphs
+            type: rich-text
+            list: true
+          - { name: workingTitle, label: Working Section Title, type: string }
+          - { name: workingIntro, label: Working Section Intro, type: rich-text }
+          - { name: workingInstructions, label: Instructions Text, type: string }
+          - name: details
+            label: Service Details
+            type: object
+            list: true
+            fields:
+              - { name: title, label: Detail Title, type: string }
+              - { name: content, label: Detail Content, type: rich-text }
+
+  mountainwave_block:
+    label: Contact Section
+    type: object
+    fields:
+      - name: content
+        label: Content
+        type: object
+        fields:
+          - { name: contactTitle, label: Contact Section Title, type: string }
+          - name: paragraphs
+            label: Contact Paragraphs
+            type: rich-text
+            list: true
+
+  testimonials_block:
+    label: Testimonials Section
+    type: object
+    fields:
+      - name: content
+        label: Content
+        type: object
+        fields:
+          - { name: title, label: Testimonials Section Title, type: string }
+          - { name: description, label: Testimonials Description, type: rich-text }
+          - name: testimonials
+            label: Testimonial Items
+            type: object
+            list: true
+            fields:
+              - { name: name, label: Person Name, type: string }
+              - { name: company, label: Company Name, type: string }
+              - { name: image, label: Image Path, type: string }
+              - name: paragraphs
+                label: Testimonial Paragraphs
+                type: rich-text
+                list: true
