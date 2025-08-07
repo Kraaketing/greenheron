@@ -1,7 +1,3 @@
-# PagesCMS Configuration for Green Heron
-media:
-  input: assets/images
-  output: /assets/images
 
 content:
   - name: index
