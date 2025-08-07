@@ -1,9 +1,13 @@
+# PagesCMS Configuration for Green Heron
+media:
+  input: src/static
+  output: /static
 
 content:
   - name: index
     label: Home Page
     type: file
-    path: index.md
+    path: src/pages/index.md
     fields:
       - { name: title, label: Title, type: string }
       - { name: layout, type: string, hidden: true, default: "layouts/base.njk" }
