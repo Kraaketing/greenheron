@@ -10,12 +10,12 @@ blocks:
         - Hi! I am Jørgen, and Green Heron is my one-man web agency. I design
           and code websites from the ground up with the goal of having the
           process and product be as environmentally friendly as possible.
-        - It is [estimated](https://pubmed.ncbi.nlm.nih.gov/34553177/) that
+        - It's [estimated](https://pubmed.ncbi.nlm.nih.gov/34553177/) that
           Information and Communication Technology is responsible for between
           2.1% to 3.9% of global CO2 emissions. In comparison, aviation is
-          responsible for 2%. How we use and make our technologies matter, and
-          efficient code, minimal data usage, and green energy usage can make a
-          big impact on the environmental cost of using the internet.
+          responsible for 2%. Efficient code, minimal data usage, and green
+          energy will greatly reduce the environmental cost of using the
+          internet.
         - I care deeply for community and nature. That’s why I wish to use my
           creative instinct and web development skills to help build a
           sustainable future.
