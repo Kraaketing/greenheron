@@ -35,8 +35,7 @@ components:
   hero_block:
     label: Hero Section
     type: object
-    fields:
-      - { name: title, label: Hero Title, type: string, required: false }
+    fields: []
 
   intro_block:
     label: Introduction Section
@@ -46,43 +45,43 @@ components:
         label: Introduction Paragraphs
         type: array
         fields:
-          - { name: paragraph, label: Paragraph, type: rich-text }
-      - { name: workingTitle, label: Working Section Title, type: string, default: "How I work" }
+          - { name: value, label: Paragraph, type: rich-text }
+      - { name: workingTitle, label: Working Section Title, type: string }
       - { name: workingIntro, label: Working Section Intro, type: rich-text }
-      - { name: workingInstructions, label: Instructions Text, type: string, default: "(click to expand)" }
+      - { name: workingInstructions, label: Instructions Text, type: string }
       - name: details
         label: Service Details
         type: array
         fields:
-          - { name: title, label: Detail Title, type: string, required: true }
-          - { name: content, label: Detail Content, type: rich-text, required: true }
+          - { name: title, label: Detail Title, type: string }
+          - { name: content, label: Detail Content, type: rich-text }
 
   mountainwave_block:
     label: Contact Section
     type: object
     fields:
-      - { name: contactTitle, label: Contact Section Title, type: string, default: "Get in touch!" }
+      - { name: contactTitle, label: Contact Section Title, type: string }
       - name: paragraphs
         label: Contact Paragraphs
         type: array
         fields:
-          - { name: paragraph, label: Paragraph, type: rich-text }
+          - { name: value, label: Paragraph, type: rich-text }
 
   testimonials_block:
     label: Testimonials Section
     type: object
     fields:
-      - { name: title, label: Testimonials Section Title, type: string, default: "Testimonials" }
+      - { name: title, label: Testimonials Section Title, type: string }
       - { name: description, label: Testimonials Description, type: rich-text }
       - name: testimonials
         label: Testimonial Items
         type: array
         fields:
-          - { name: name, label: Person Name, type: string, required: true }
-          - { name: company, label: Company Name, type: string, required: true }
-          - { name: image, label: Image Path, type: string, default: "svg/no-image.njk" }
+          - { name: name, label: Person Name, type: string }
+          - { name: company, label: Company Name, type: string }
+          - { name: image, label: Image Path, type: string }
           - name: paragraphs
             label: Testimonial Paragraphs
             type: array
             fields:
-              - { name: paragraph, label: Paragraph, type: rich-text }
+              - { name: value, label: Paragraph, type: rich-text }
