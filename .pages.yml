@@ -32,10 +32,6 @@ content:
             component: testimonials_block
 
 components:
-  hero_block:
-    label: Hero Section
-    type: object
-    fields: []
 
   intro_block:
     label: Introduction Section
