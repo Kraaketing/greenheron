@@ -75,7 +75,7 @@ components:
             list: true
 
   testimonials_block:
-    label: Testimonials Section
+    label: Testimonials
     type: object
     fields:
       - name: content
