@@ -18,9 +18,6 @@ content:
         list: true
         blockKey: type
         blocks:
-          - name: hero
-            label: Hero Section
-            component: hero_block
           - name: intro
             label: Introduction Section
             component: intro_block
@@ -32,7 +29,6 @@ content:
             component: testimonials_block
 
 components:
-
   intro_block:
     label: Introduction Section
     type: object
@@ -71,7 +67,7 @@ components:
             list: true
 
   testimonials_block:
-    label: Testimonials
+    label: Testimonials Section
     type: object
     fields:
       - name: content
