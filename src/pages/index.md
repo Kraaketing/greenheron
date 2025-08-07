@@ -9,7 +9,7 @@ blocks:
       paragraphs:
         - Hi! I’m Jørgen, and Green Heron is my one-man web agency. I design and
           code websites from the ground up. It’s my goal to make the process and
-          product as environmentally friendly as possible..
+          product as environmentally friendly as possible.
         - It's [estimated](https://pubmed.ncbi.nlm.nih.gov/34553177/) that
           Information and Communication Technology is responsible for between
           2.1% to 3.9% of global CO2 emissions. In comparison, aviation is
