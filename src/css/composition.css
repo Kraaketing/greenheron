@@ -125,12 +125,29 @@
   flex-grow: 2;
   flex-basis: 30rem;
   width: clamp(100%, 40rem, 100%);
+  &.right{
+    p:first-child {
+      border-left-color: var(--two);
+    }
+    p {
+      border-left-width: min(calc(0.4rem + 2.9vw), 2.6rem);
+      border-left-style: solid;
+      padding-left: clamp(1rem, 6vw, 2rem);
+      border-left-color: transparent;
+    }
+    p:not(:last-child) {
+      margin-bottom: 0.8rem;
+    }
+  }
 }
 
 .text-right {
   border-left-width: min(calc(0.4rem + 2.9vw), 2.6rem);
   border-left-style: solid;
   padding-left: clamp(1rem, 6vw, 2rem);
+  p {
+    border-left-color: transparent;
+  }
 }
 
 .border-dark {

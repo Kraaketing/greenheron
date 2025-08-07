@@ -3,60 +3,29 @@
     <figure class="jorg">
       <img alt="Portrait of Jørgen" class="round-image" src="/jorgen.webp"/>
     </figure>
-      <div class="two-thirds">
-      <p class="text-right border-dark">
-        Hi! I am Jørgen, and Green Heron is my one-man web agency<span class="period">.</span> I design and
-        code websites from the ground up with the goal of having the process and
-        product be as environmentally friendly as possible<span class="period">.</span>
-      </p>
-      <br/>
-      <p class="text-right border-transparent">It is <a href="https://pubmed.ncbi.nlm.nih.gov/34553177/">estimated</a> that Information and Communication Technology is responsible for between 2.1% to 3.9% of global CO2 emissions<span class="period">.</span> In comparison, aviation  is responsible for 2%<span class="period">.</span> How we use and make our technologies matter, and efficient code, minimal data usage, and green energy usage can make a big impact on the environmental cost of using the internet<span class="period">.</span></p>
-      <br/>
-      <p class="text-right border-transparent">I care deeply for the people and nature around us, and I wish to use my creative instinct and web development skills to be part of the change to a sustainable future<span class="period">.</span></p>
+    <div class="two-thirds right">
+<div class="two-thirds right">
+  {% for paragraph in block.content.paragraphs %}
+    {{ paragraph | markdown | safe }}
+  {% endfor %}
+</div>
     </div>
   </article>
   <article class="flex-container big-gap reverse">
-    <div class="two-thirds">
-      <h2 class="font-big">How I work</h2>
-      <p>
-        I use lightweight technologies and optimise code to minimise energy
-        consumption, and hosting services that use green energy<span class="period">.</span> I design and
-        code everything myself, which results in web pages that are<span class="period">:<br/>(click to expand)</span>
-      </p>
+    <div class="two-thirds | info-two">
+      <h2 class="font-big">{{ block.content.workingTitle }}</h2>
+      {{ block.content.workingIntro | markdown | safe }}
+      {{ block.content.workingInstructions | markdown | safe }}
       <br/>
+      {% for detail in block.content.details %}
       <details>
-        <summary>Sustainable</summary>
-        I use techniques to reduce the energy consumption of the web pages that I make, like Static Site Generation, scoping fonts, solving problems with CSS rather than JavaScript, using code minifiers, and much more<span class="period">.</span><br/> The resulting pages are very light on code and thus much more energy efficient and performant compared to pages made in, for example, Squarespace or Wordpress<span class="period">.</span> <br/>Additionally, I use hosting services that use green energy<span class="period">.</span><br/>
+        <summary>{{ detail.title }}</summary>
+        {{ detail.content | markdown | safe }}
       </details>
-      <details>
-        <summary>Custom designed</summary>
-        I have a background in fine art, and use my skills and creativity to make personalised webpages with custom made assets<span class="period">.</span> I see my commitment to be environmentally friendly as a creative restriction to work within<span class="period">.</span> I love using the tools at my disposal in creative new ways<span class="period">.</span> All assets and design work you see on this site is done by me<span class="period">.</span>
-      </details>
-      <details>
-        <summary>Accessible</summary>
-        I write with semantic HTML and use relative font sizes, this results in fully functional and navigable web pages for user with reduced vision, and users whom use screen readers<span class="period">.</span> My pages are also fully responsive<span class="period">.</span>
-      </details>
-      <details>
-        <summary>SEO- performant</summary>
-        Using Static Site Generation and semantic HTML results in good SEO scores<span class="period">.</span>No need to optimise<span class="period">.</span>
-      </details>
-      <details>
-        <summary>Fast</summary>
-        Serving pages as static HTML, with minimal code bases and minimal use of JavaScript, gives the servers and browsers minimal work to do and minimal data to parse at load time<span class="period">.</span> This results in very fast load and page speeds<span class="period">.</span>
-      </details>
-      <details>
-        <summary>Secure</summary>
-        Static HTML and minimal JavaScript usage leaves no access points for malicious actors<span class="period">.</span> SSL certificates ensures security and spam protection server side<span class="period">.</span>
-      </details>
-      <details>
-        <summary>Future-proof</summary>
-        Static HTML will pretty much last as long as we have browsers<span class="period">.</span> In addition, my technique has very few dependencies, and the ones I do have are hand-picked to be open source and available to ensure that no organisational decisions or changes will impact the page performance or availability<span class="period">.</span>
-      </details>
+      {% endfor %}
     </div>
     <figure class="standard-container | | birbs">
       {% include "svg/birb1.njk" %} 
-      <!-- {% include "svg/birb2.njk" %} 
-      {% include "svg/birb3.njk" %} -->
     </figure>
   </article>
 </section>

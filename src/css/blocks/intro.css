@@ -5,6 +5,11 @@
     width: min(80%, 14rem);
     margin-inline: auto;
   }
+  .info-two {
+    p:nth-child(3){
+      color: var(--three);
+    }
+  }
   .birbs {
     margin-top: 3rem;
     margin-inline: auto;
@@ -38,11 +43,6 @@
   svg:not(:last-child) {
     margin-bottom: 10rem;
   }
-  /* @media screen and (max-width: 57rem) {
-    svg {
-      display: none;
-    }
-  } */
   article:has(details) {
     margin-left: 1rem;
   }

@@ -1,0 +1,146 @@
+media:
+  input: src/static
+  output: /uploads
+
+# PagesCMS Configuration for Green Heron
+title: "Green Heron Web Agency"
+description: "Sustainable web development agency"
+
+# Main page collection
+collections:
+  pages:
+    path: "."
+    files:
+      - "index.md"
+    fields:
+      - name: "title"
+        type: "text"
+        required: true
+        default: "Green Heron"
+      
+      - name: "layout"
+        type: "text"
+        default: "layouts/base.njk"
+        hidden: true
+      
+      - name: "permalink"
+        type: "text"
+        default: "/"
+        hidden: true
+      
+      # Blocks configuration
+      - name: "blocks"
+        type: "list"
+        fields:
+          - name: "type"
+            type: "select"
+            options:
+              - "hero"
+              - "intro" 
+              - "mountainwave"
+              - "testimonials"
+          
+          # Intro block content
+          - name: "content"
+            type: "object"
+            condition: 
+              field: "type"
+              equals: "intro"
+            fields:
+              - name: "paragraphs"
+                type: "list"
+                label: "Introduction Paragraphs"
+                fields:
+                  - name: "text"
+                    type: "markdown"
+                    label: "Paragraph Content"
+              
+              - name: "workingTitle"
+                type: "text"
+                label: "Working Section Title"
+                default: "How I work"
+              
+              - name: "workingIntro"
+                type: "markdown"
+                label: "Working Section Intro"
+              
+              - name: "workingInstructions"
+                type: "text"
+                label: "Instructions Text"
+                default: "(click to expand)"
+              
+              - name: "details"
+                type: "list"
+                label: "Service Details"
+                fields:
+                  - name: "title"
+                    type: "text"
+                    label: "Detail Title"
+                    required: true
+                  - name: "content"
+                    type: "markdown"
+                    label: "Detail Content"
+                    required: true
+          
+          # Mountain wave (contact) block content
+          - name: "content"
+            type: "object"
+            condition:
+              field: "type"
+              equals: "mountainwave"
+            fields:
+              - name: "contactTitle"
+                type: "text"
+                label: "Contact Section Title"
+                default: "Get in touch!"
+              
+              - name: "paragraphs"
+                type: "list"
+                label: "Contact Paragraphs"
+                fields:
+                  - name: "text"
+                    type: "markdown"
+                    label: "Paragraph Content"
+          
+          # Testimonials block content
+          - name: "content"
+            type: "object"
+            condition:
+              field: "type"
+              equals: "testimonials"
+            fields:
+              - name: "title"
+                type: "text"
+                label: "Testimonials Section Title"
+                default: "Testimonials"
+              
+              - name: "description"
+                type: "markdown"
+                label: "Testimonials Description"
+              
+              - name: "testimonials"
+                type: "list"
+                label: "Testimonial Items"
+                fields:
+                  - name: "name"
+                    type: "text"
+                    label: "Person Name"
+                    required: true
+                  
+                  - name: "company"
+                    type: "text"
+                    label: "Company Name"
+                    required: true
+                  
+                  - name: "image"
+                    type: "text"
+                    label: "Image Path"
+                    default: "svg/no-image.njk"
+                  
+                  - name: "paragraphs"
+                    type: "list"
+                    label: "Testimonial Paragraphs"
+                    fields:
+                      - name: "text"
+                        type: "markdown"
+                        label: "Paragraph Content"
