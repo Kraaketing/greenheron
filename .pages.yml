@@ -1,147 +1,145 @@
 # PagesCMS Configuration for Green Heron
-title: "Green Heron Web Agency"
-description: "Sustainable web development agency"
+media:
+  input: assets/images
+  output: /assets/images
 
-# Main page collection
-collections:
-  pages:
-    path: "."
-    files:
-      - "index.md"
+content:
+  - name: homepage
+    label: Home Page
+    type: file
+    path: index.md
     fields:
-      - name: "title"
-        type: "text"
+      - name: title
+        label: Title
+        type: string
         required: true
         default: "Green Heron"
       
-      - name: "layout"
-        type: "text"
+      - name: layout
+        type: string
+        hidden: true
         default: "layouts/base.njk"
-        hidden: true
       
-      - name: "permalink"
-        type: "text"
-        default: "/"
+      - name: permalink
+        type: string
         hidden: true
+        default: "/"
       
       # Blocks configuration
-      - name: "blocks"
-        type: "list"
+      - name: blocks
+        label: Page Blocks
+        type: array
         fields:
-          - name: "type"
-            type: "select"
+          - name: type
+            label: Block Type
+            type: select
             options:
-              - "hero"
-              - "intro" 
-              - "mountainwave"
-              - "testimonials"
+              - hero
+              - intro
+              - mountainwave
+              - testimonials
           
           # Intro block content
-          - name: "content"
-            type: "object"
-            condition: 
-              field: "type"
-              equals: "intro"
+          - name: content
+            label: Content
+            type: object
+            condition:
+              field: type
+              equals: intro
             fields:
-              - name: "paragraphs"
-                type: "list"
-                label: "Introduction Paragraphs"
+              - name: paragraphs
+                label: Introduction Paragraphs
+                type: array
                 fields:
-                  - name: "text"
-                    type: "markdown"
-                    label: "Paragraph Content"
+                  - name: paragraph
+                    type: rich-text
               
-              - name: "workingTitle"
-                type: "text"
-                label: "Working Section Title"
+              - name: workingTitle
+                label: Working Section Title
+                type: string
                 default: "How I work"
               
-              - name: "workingIntro"
-                type: "markdown"
-                label: "Working Section Intro"
+              - name: workingIntro
+                label: Working Section Intro
+                type: rich-text
               
-              - name: "workingInstructions"
-                type: "text"
-                label: "Instructions Text"
+              - name: workingInstructions
+                label: Instructions Text
+                type: string
                 default: "(click to expand)"
               
-              - name: "details"
-                type: "list"
-                label: "Service Details"
+              - name: details
+                label: Service Details
+                type: array
                 fields:
-                  - name: "title"
-                    type: "text"
-                    label: "Detail Title"
+                  - name: title
+                    label: Detail Title
+                    type: string
                     required: true
-                  - name: "content"
-                    type: "markdown"
-                    label: "Detail Content"
+                  - name: content
+                    label: Detail Content
+                    type: rich-text
                     required: true
           
           # Mountain wave (contact) block content
-          - name: "content"
-            type: "object"
+          - name: content
+            label: Content
+            type: object
             condition:
-              field: "type"
-              equals: "mountainwave"
+              field: type
+              equals: mountainwave
             fields:
-              - name: "contactTitle"
-                type: "text"
-                label: "Contact Section Title"
+              - name: contactTitle
+                label: Contact Section Title
+                type: string
                 default: "Get in touch!"
               
-              - name: "paragraphs"
-                type: "list"
-                label: "Contact Paragraphs"
+              - name: paragraphs
+                label: Contact Paragraphs
+                type: array
                 fields:
-                  - name: "text"
-                    type: "markdown"
-                    label: "Paragraph Content"
+                  - name: paragraph
+                    type: rich-text
           
           # Testimonials block content
-          - name: "content"
-            type: "object"
+          - name: content
+            label: Content
+            type: object
             condition:
-              field: "type"
-              equals: "testimonials"
+              field: type
+              equals: testimonials
             fields:
-              - name: "title"
-                type: "text"
-                label: "Testimonials Section Title"
+              - name: title
+                label: Testimonials Section Title
+                type: string
                 default: "Testimonials"
               
-              - name: "description"
-                type: "markdown"
-                label: "Testimonials Description"
+              - name: description
+                label: Testimonials Description
+                type: rich-text
               
-              - name: "testimonials"
-                type: "list"
-                label: "Testimonial Items"
+              - name: testimonials
+                label: Testimonial Items
+                type: array
                 fields:
-                  - name: "name"
-                    type: "text"
-                    label: "Person Name"
+                  - name: name
+                    label: Person Name
+                    type: string
                     required: true
                   
-                  - name: "company"
-                    type: "text"
-                    label: "Company Name"
+                  - name: company
+                    label: Company Name
+                    type: string
                     required: true
                   
-                  - name: "image"
-                    type: "text"
-                    label: "Image Path"
+                  - name: image
+                    label: Image Path
+                    type: string
                     default: "svg/no-image.njk"
                   
-                  - name: "paragraphs"
-                    type: "list"
-                    label: "Testimonial Paragraphs"
+                  - name: paragraphs
+                    label: Testimonial Paragraphs
+                    type: array
                     fields:
-                      - name: "text"
-                        type: "markdown"
-                        label: "Paragraph Content"
-
-# Media settings for any images
-media:
-  path: "assets/images"
-  public_path: "/assets/images"
+                      - name: paragraph
+                        type: rich-text
