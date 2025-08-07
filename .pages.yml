@@ -9,137 +9,80 @@ content:
     type: file
     path: index.md
     fields:
-      - name: title
-        label: Title
-        type: string
-        required: true
-        default: "Green Heron"
-      
-      - name: layout
-        type: string
-        hidden: true
-        default: "layouts/base.njk"
-      
-      - name: permalink
-        type: string
-        hidden: true
-        default: "/"
-      
-      # Blocks configuration
+      - { name: title, label: Title, type: string }
+      - { name: layout, type: string, hidden: true, default: "layouts/base.njk" }
+      - { name: permalink, type: string, hidden: true, default: "/" }
       - name: blocks
         label: Page Blocks
+        type: block
+        list: true
+        blockKey: type
+        blocks:
+          - name: hero
+            label: Hero Section
+            component: hero_block
+          - name: intro
+            label: Introduction Section
+            component: intro_block
+          - name: mountainwave
+            label: Contact Section
+            component: mountainwave_block
+          - name: testimonials
+            label: Testimonials Section
+            component: testimonials_block
+
+components:
+  hero_block:
+    label: Hero Section
+    type: object
+    fields:
+      - { name: title, label: Hero Title, type: string, required: false }
+
+  intro_block:
+    label: Introduction Section
+    type: object
+    fields:
+      - name: paragraphs
+        label: Introduction Paragraphs
         type: array
         fields:
-          - name: type
-            label: Block Type
-            type: select
-            options:
-              - hero
-              - intro
-              - mountainwave
-              - testimonials
-          
-          # Intro block content
-          - name: content
-            label: Content
-            type: object
-            condition:
-              field: type
-              equals: intro
+          - { name: paragraph, label: Paragraph, type: rich-text }
+      - { name: workingTitle, label: Working Section Title, type: string, default: "How I work" }
+      - { name: workingIntro, label: Working Section Intro, type: rich-text }
+      - { name: workingInstructions, label: Instructions Text, type: string, default: "(click to expand)" }
+      - name: details
+        label: Service Details
+        type: array
+        fields:
+          - { name: title, label: Detail Title, type: string, required: true }
+          - { name: content, label: Detail Content, type: rich-text, required: true }
+
+  mountainwave_block:
+    label: Contact Section
+    type: object
+    fields:
+      - { name: contactTitle, label: Contact Section Title, type: string, default: "Get in touch!" }
+      - name: paragraphs
+        label: Contact Paragraphs
+        type: array
+        fields:
+          - { name: paragraph, label: Paragraph, type: rich-text }
+
+  testimonials_block:
+    label: Testimonials Section
+    type: object
+    fields:
+      - { name: title, label: Testimonials Section Title, type: string, default: "Testimonials" }
+      - { name: description, label: Testimonials Description, type: rich-text }
+      - name: testimonials
+        label: Testimonial Items
+        type: array
+        fields:
+          - { name: name, label: Person Name, type: string, required: true }
+          - { name: company, label: Company Name, type: string, required: true }
+          - { name: image, label: Image Path, type: string, default: "svg/no-image.njk" }
+          - name: paragraphs
+            label: Testimonial Paragraphs
+            type: array
             fields:
-              - name: paragraphs
-                label: Introduction Paragraphs
-                type: array
-                fields:
-                  - name: paragraph
-                    type: rich-text
-              
-              - name: workingTitle
-                label: Working Section Title
-                type: string
-                default: "How I work"
-              
-              - name: workingIntro
-                label: Working Section Intro
-                type: rich-text
-              
-              - name: workingInstructions
-                label: Instructions Text
-                type: string
-                default: "(click to expand)"
-              
-              - name: details
-                label: Service Details
-                type: array
-                fields:
-                  - name: title
-                    label: Detail Title
-                    type: string
-                    required: true
-                  - name: content
-                    label: Detail Content
-                    type: rich-text
-                    required: true
-          
-          # Mountain wave (contact) block content
-          - name: content
-            label: Content
-            type: object
-            condition:
-              field: type
-              equals: mountainwave
-            fields:
-              - name: contactTitle
-                label: Contact Section Title
-                type: string
-                default: "Get in touch!"
-              
-              - name: paragraphs
-                label: Contact Paragraphs
-                type: array
-                fields:
-                  - name: paragraph
-                    type: rich-text
-          
-          # Testimonials block content
-          - name: content
-            label: Content
-            type: object
-            condition:
-              field: type
-              equals: testimonials
-            fields:
-              - name: title
-                label: Testimonials Section Title
-                type: string
-                default: "Testimonials"
-              
-              - name: description
-                label: Testimonials Description
-                type: rich-text
-              
-              - name: testimonials
-                label: Testimonial Items
-                type: array
-                fields:
-                  - name: name
-                    label: Person Name
-                    type: string
-                    required: true
-                  
-                  - name: company
-                    label: Company Name
-                    type: string
-                    required: true
-                  
-                  - name: image
-                    label: Image Path
-                    type: string
-                    default: "svg/no-image.njk"
-                  
-                  - name: paragraphs
-                    label: Testimonial Paragraphs
-                    type: array
-                    fields:
-                      - name: paragraph
-                        type: rich-text
+              - { name: paragraph, label: Paragraph, type: rich-text }
