@@ -1,7 +1,3 @@
-media:
-  input: src/static
-  output: /uploads
-
 # PagesCMS Configuration for Green Heron
 title: "Green Heron Web Agency"
 description: "Sustainable web development agency"
@@ -144,3 +140,8 @@ collections:
                       - name: "text"
                         type: "markdown"
                         label: "Paragraph Content"
+
+# Media settings for any images
+media:
+  path: "assets/images"
+  public_path: "/assets/images"
