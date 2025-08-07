@@ -4,10 +4,10 @@ media:
   output: /assets/images
 
 content:
-  - name: homepage
+  - name: index
     label: Home Page
     type: file
-    path: ./index.md
+    path: index.md
     fields:
       - name: title
         label: Title
