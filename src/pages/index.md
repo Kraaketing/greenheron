@@ -20,11 +20,11 @@ blocks:
           creative instinct and web development skills to help build a
           sustainable future.
       workingTitle: How I work
-      workingIntro: "I use lightweight technologies and optimise code to minimise
-        energy consumption, and hosting services that use green energy. I design
-        and code everything myself, which results in web pages that are:"
-      workingInstructions: |
-        (click to expand)
+      workingIntro: "I design and code everything myself, using lightweight
+        technologies and optimising code to minimise energy consumption. I also
+        use hosting services powered by green energy. The webpages I produce
+        are:"
+      workingInstructions: (select to expand)
       details:
         - title: Sustainable
           content: I use techniques to reduce the energy consumption of the web pages that
@@ -68,15 +68,14 @@ blocks:
     content:
       contactTitle: Get in touch!
       paragraphs:
-        - I would love to work with you wether you are representing a
-          sustainable organisation, a business that wants to make more ethical
-          choices, or an individual with a need for a webpage. If you are on a
-          budget I am happy to explore what solutions I can offer you, don't be
-          afraid to ask! My goal is to have making the green choice accessible
+        - I’d love to work with you whether you’re an individual who needs a
+          webpage or an organisation that cares about sustainability. If you’re
+          on a budget, I’m happy to explore what solutions I can offer you.
+          Don't be afraid to ask! My goal is to make the green choice accessible
           for everyone.
-        - For my first customers with Green Heron I offer discounted prices in
-          exchange for testimonials. Fill out my [contact form](/contact) to get
-          in touch. Let's talk!
+        - For my first customers with Green Heron, I’m offering discounted
+          prices in exchange for testimonials. Fill out my [contact
+          form](/contact) to get in touch. Let's talk!
         - "The services that I offer are:"
         - |-
           *   Branding
