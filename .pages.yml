@@ -7,7 +7,7 @@ content:
   - name: homepage
     label: Home Page
     type: file
-    path: index.md
+    path: ./index.md
     fields:
       - name: title
         label: Title
