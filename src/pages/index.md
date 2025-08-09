@@ -10,7 +10,7 @@ blocks:
         - Hi! I’m Jørgen, and Green Heron is my one-man web agency. I design and
           code websites from the ground up. It’s my goal to make the process and
           product as environmentally friendly as possible.
-        - It's [estimated](https://pubmed.ncbi.nlm.nih.gov/34553177/) that
+        - It's estimated[*](https://pubmed.ncbi.nlm.nih.gov/34553177/) that
           Information and Communication Technology is responsible for between
           2.1% to 3.9% of global CO2 emissions. In comparison, aviation is
           responsible for 2%. Efficient code, minimal data usage, and green
@@ -27,43 +27,31 @@ blocks:
       workingInstructions: (select to expand)
       details:
         - title: Sustainable
-          content: I use techniques to reduce the energy consumption of the web pages that
-            I make, like Static Site Generation, scoping fonts, solving problems
-            with CSS rather than JavaScript, using code minifiers, and much
-            more. The resulting pages are very light on code and thus much more
-            energy efficient and performant compared to pages made in, for
-            example, Squarespace or Wordpress. Additionally, I use hosting
-            services that use green energy.
+          content: |
+           I use techniques that reduce the amount of energy used by a webpage. These include:
+           - producing static sites
+           - limiting fonts
+           - using CSS instead of JavaScript when possible
+           - reducing the size of files through a process called code minifying
+           - designing for reduced image use
+           - using efficient image formats
+           
+           With these techniques and more, I produce webpages that are very light on code compared to those made with well-known CMS, such as Squarespace or WordPress.
+           Additionally, I use hosting services that run on green energy.
         - title: Custom designed
-          content: I have a background in fine art, and use my skills and creativity to
-            make personalised webpages with custom made assets. I see my
-            commitment to be environmentally friendly as a creative restriction
-            to work within. I love using the tools at my disposal in creative
-            new ways. All assets and design work you see on this site is done by
-            me.
+          content: I build personalised webpages with custom-made imagery for my clients. My design work draws on my background in Fine Art and my commitment to sustainability. I enjoy supporting my clients’ ideas in ways that prioritise energy efficiency. 
+           All the design work on the Green Heron website was created by me. 
         - title: Accessible
-          content: I write with semantic HTML and use relative font sizes, this results in
-            fully functional and navigable web pages for user with reduced
-            vision, and users whom use screen readers. My pages are also fully
-            responsive.
+          content: I write with semantic HTML and use relative font sizes. This results in fully functional and navigable webpages for screen readers and users with reduced vision. 
+           My pages are also fully responsive.
         - title: SEO- performant
-          content: Using Static Site Generation and semantic HTML results in good SEO
-            scores. No need to optimise.
+          content: Static site generation and semantic HTML result in good SEO scores. There’s no need to optimise the webpage any further.
         - title: Fast
-          content: Serving pages as static HTML, with minimal code bases and minimal use
-            of JavaScript, gives the servers and browsers minimal work to do and
-            minimal data to parse at load time. This results in very fast load
-            and page speeds.
+          content: Using static HTML, with minimal code bases and minimal use of JavaScript, gives the servers and browsers less work to do and minimal data to parse at load time. This results in webpages that load quickly and have fast page speeds.
         - title: Secure
-          content: Static HTML and minimal JavaScript usage leaves no access points for
-            malicious actors. SSL certificates ensures security and spam
-            protection server side.
+          content: Using static HTML and minimal JavaScript leaves no access points for malicious actors. My webpages have SSL certificates to ensure security and spam protection server side.
         - title: Future-proof
-          content: Static HTML will pretty much last as long as we have browsers. In
-            addition, my technique has very few dependencies, and the ones I do
-            have are hand-picked to be open source and available to ensure that
-            no organisational decisions or changes will impact the page
-            performance or availability.
+          content: Static HTML will pretty much last as long as we have browsers. In addition, my technique has very few dependencies. The ones I do have are hand-picked to be open source and available. This ensures that no organisational decisions or changes will impact the webpage's performance or availability.
   - type: mountainwave
     content:
       contactTitle: Get in touch!

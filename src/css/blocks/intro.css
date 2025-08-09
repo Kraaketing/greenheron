@@ -19,6 +19,14 @@
     padding-left: 1rem;
     line-height: 1.1;
   }
+  a {
+    text-decoration: none;
+  }
+  details {
+    ul {
+  list-style-position: inside; 
+margin-bottom: 0.5rem;   }
+  }
   details:first-child {
     margin-top: 1rem;
   }
@@ -31,7 +39,14 @@
   summary {
     margin-left: -1.5rem;
   }
-  svg:first-child {
+  svg {
+    width: 15rem;
+    position: sticky;
+    top: 0;
+    padding-top: 5rem;
+    margin-top: -5rem;
+  }
+  /* svg:first-child {
     width: 15rem;
   }
   svg:nth-child(2) {
@@ -42,7 +57,7 @@
   }
   svg:not(:last-child) {
     margin-bottom: 10rem;
-  }
+  } */
   article:has(details) {
     margin-left: 1rem;
   }
