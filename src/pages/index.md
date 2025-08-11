@@ -44,7 +44,7 @@ blocks:
         - title: Accessible
           content: I write with semantic HTML and use relative font sizes. This results in fully functional and navigable webpages for screen readers and users with reduced vision. 
            My pages are also fully responsive.
-        - title: SEO- performant
+        - title: SEO-performant
           content: Static site generation and semantic HTML result in good SEO scores. There’s no need to optimise the webpage any further.
         - title: Fast
           content: Using static HTML, with minimal code bases and minimal use of JavaScript, gives the servers and browsers less work to do and minimal data to parse at load time. This results in webpages that load quickly and have fast page speeds.
@@ -75,9 +75,7 @@ blocks:
   - type: testimonials
     content:
       title: Testimonials
-      description: "As the first pages from, and testimonials for Green Heron are
-        still being made, here is a testimonial from a previous employer of
-        mine:"
+      description: "Here's a testimonial from a previous employer of mine. I look forward to adding more testimonials from Green Heron's clients soon."
       testimonials:
         - name: Justin Glück
           company: Vibe Digital Media
