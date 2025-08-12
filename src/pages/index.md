@@ -30,13 +30,14 @@ blocks:
           content: |
            I use techniques that reduce the amount of energy used by a webpage. These include:
            - producing static sites
-           - limiting fonts
+           - subsetting fonts
            - using CSS instead of JavaScript when possible
            - reducing the size of files through a process called code minifying
-           - designing for reduced image use
            - using efficient image formats
+           - designing for reduced image use, fewer fonts on a page, and other data-reducing aspects
            
-           With these techniques and more, I produce webpages that are very light on code compared to those made with well-known CMS, such as Squarespace or WordPress.
+           With these techniques and more, I produce webpages that are very light on code compared to those made with well-known CMSs, such as Squarespace or WordPress, and more commonly used frameworks such as NextJS.
+           
            Additionally, I use hosting services that run on green energy.
         - title: Custom designed
           content: I build personalised webpages with custom-made imagery for my clients. My design work draws on my background in Fine Art and my commitment to sustainability. I enjoy supporting my clients’ ideas in ways that prioritise energy efficiency. 
