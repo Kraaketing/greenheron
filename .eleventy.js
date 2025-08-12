@@ -11,14 +11,6 @@ module.exports = function (eleventyConfig) {
     return md.render(content);
   });
 
-  // Claude: Try this approach - add both the CSS files AND the bundle file to watch
-  eleventyConfig.addWatchTarget("src/css/**/*.css");
-  eleventyConfig.addWatchTarget("src/css/bundle.njk");
-  
-  // Claude: Force 11ty to consider CSS changes as template dependencies
-  eleventyConfig.addTemplateFormats("css");
-
-
   // Minify html output
   eleventyConfig.addTransform("htmlmin", function (content, outputPath) {
     if (this.outputPath.endsWith(".html")) {
