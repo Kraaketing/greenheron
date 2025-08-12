@@ -5,9 +5,16 @@ eleventyExcludeFromCollections: true
 <?xml version="1.0" encoding="utf-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     {% for page in collections.all %}
+        {% set isCSS = page.url.endsWith('.css') %}
+        {% set isJS = page.url.endsWith('.js') %}
+        {% set isXML = page.url.endsWith('.xml') %}
+        {% if not isCSS and not isJS and not isXML %}
         <url>
             <loc>https://greenheron.design{{ page.url | url }}</loc>
             <lastmod>{{ page.date.toISOString() }}</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>{% if page.url == '/' %}1.0{% else %}0.8{% endif %}</priority>
         </url>
+        {% endif %}
     {% endfor %}
 </urlset>
