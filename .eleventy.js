@@ -5,6 +5,7 @@ const md = new markdownIt();
 module.exports = function (eleventyConfig) {
   // Passthough paths
   eleventyConfig.addPassthroughCopy({ "src/static": "/" });
+  eleventyConfig.addPassthroughCopy({ "src/robots.txt": "/robots.txt" });
 
   //markdown filter
   eleventyConfig.addFilter("markdown", function (content) {

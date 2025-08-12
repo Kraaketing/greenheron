@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /admin/
+
+Host: https://greenheron.design
+Sitemap: https://greenheron.design/sitemap.xml
