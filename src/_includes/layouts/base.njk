@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="description" content="Sustainable web pages designed and developed with love and creativity in Portugal, for a greener web."/>
     <script type="application/ld+json">
-      {{ structured-data | dump | safe }}
+      {{ structuredData | dump | safe }}
     </script>
     {% include "meta/open-graph.njk" %}
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -28,19 +28,26 @@
       {% if blocks %} 
         {% set needsParallax = false %}
         {% for block in blocks %} 
+
           {% if block.type == "hero" %} 
             {% include "blocks/hero.njk" %} 
+
           {% elif block.type == "intro" %}
             {% include "blocks/intro.njk" %} 
+
           {% elif block.type == "mountainwave" %}
             {% include "blocks/mountainwave.njk" %} 
             {% set needsParallax = true %}
+
           {% elif block.type == "testimonials" %} 
             {% include "blocks/testimonials.njk" %} 
+
           {% elif block.type == "contact-block" %} 
             {% include "blocks/contact-block.njk" %}
+
           {% elif block.type == "sent" %} 
             {% include "blocks/sent.njk" %} 
+
           {% endif %} 
         {% endfor %} 
       {% endif %}
