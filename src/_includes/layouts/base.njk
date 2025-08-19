@@ -6,8 +6,7 @@
     <script type="application/ld+json">
       {{ structured-data | dump | safe }}
     </script>
-        {% include "_data/open-graph.njk" %}
-
+    {% include "meta/open-graph.njk" %}
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/svg+xml" href="/logo.svg" />
     <title>{{ title }}</title>
