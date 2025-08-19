@@ -3,36 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="description" content="Sustainable web pages designed and developed with love and creativity in Portugal, for a greener web."/>
-    <meta property="og:title" content="{{ title or 'Green Heron Web Design' }}"/>
-    <meta property="og:description" content="Sustainable web pages designed and developed with love and creativity in Portugal, for a greener web."/>
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://greenheron.design{{ page.url or '' }}"/>
     <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "Organization",
-        "name": "Green Heron Web Design",
-        "url": "https://greenheron.design",
-        "logo": "https://greenheron.design/full-logo.png",
-        "description": "Sustainable web pages designed and developed with love and creativity in Portugal, for a greener web.",
-        "founder": {
-          "@type": "Person",
-          "name": "Jørgen N. Bjørnstad"
-        },
-        "areaServed": "Europe",
-        "address": {
-        "@type": "PostalAddress",
-        "addressCountry": "PT"
-        },
-        "serviceType": "Web Design and Development",
-        "specialty": "Sustainable Web Development"
-      }
+      {{ structured-data | dump | safe }}
     </script>
-    <meta property="og:site_name" content="Green Heron Web Design" />
-    <meta property="og:image" content="https://greenheron.design/full-logo.png" />
-    <meta property="og:image:width" content="1200" />
-    <meta property="og:image:height" content="630" />
-    <meta property="og:image:alt" content="Green Heron Web Design Logo" />
+        {% include "_data/open-graph.njk" %}
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/svg+xml" href="/logo.svg" />
     <title>{{ title }}</title>

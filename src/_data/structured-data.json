@@ -1,0 +1,19 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Green Heron Web Design",
+  "url": "https://greenheron.design",
+  "logo": "https://greenheron.design/full-logo.png",
+  "description": "Sustainable web pages designed and developed with love and creativity in Portugal, for a greener web.",
+  "founder": {
+    "@type": "Person",
+    "name": "Jørgen N. Bjørnstad"
+  },
+  "areaServed": "Europe",
+  "address": {
+    "@type": "PostalAddress",
+    "addressCountry": "PT"
+  },
+  "serviceType": "Web Design and Development",
+  "specialty": "Sustainable Web Development"
+}
