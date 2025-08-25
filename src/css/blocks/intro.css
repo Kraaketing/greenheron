@@ -6,7 +6,7 @@
     margin-inline: auto;
   }
   .info-two {
-    p:nth-child(3){
+    p:nth-child(3) {
       color: var(--three);
     }
   }
@@ -24,8 +24,9 @@
   }
   details {
     ul {
-  list-style-position: inside; 
-margin-bottom: 0.5rem;   }
+      list-style-position: inside;
+      margin-bottom: 0.5rem;
+    }
   }
   details:first-child {
     margin-top: 1rem;
@@ -37,6 +38,7 @@ margin-bottom: 0.5rem;   }
     }
   }
   summary {
+    /* font-weight: bold; */
     margin-left: -1.5rem;
   }
   svg {
