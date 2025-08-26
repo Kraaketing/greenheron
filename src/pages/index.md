@@ -82,9 +82,8 @@ blocks:
           company: Vibe Digital Media
           image: svg/no-image.njk
           paragraphs:
-            - I had the pleasure of working with and mentoring Jørgen at Vibe
-              Digital, where he freelanced as a UI designer and Mid-level
-              Frontend developer for 10 months. Jørgen's expertise and creative
+            - I had the pleasure of working with Jørgen at Vibe
+              Digital. Jørgen's expertise and creative
               flair was clear from the outset, as he crafted the initial design
               for a major eCommerce website that our client immediately
               approved. His designs were both visually appealing and highly
@@ -97,6 +96,5 @@ blocks:
             - Reliable, professional, and creative, Jørgen consistently met
               deadlines and communicated effectively with myself and our
               clients. His collaborative spirit made him an invaluable member of
-              the team. I highly recommend Jørgen for any UI design or Frontend
-              developer role.
+              the team. 
 ---
