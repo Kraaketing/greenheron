@@ -3,6 +3,7 @@ const markdownIt = require("markdown-it");
 const md = new markdownIt();
 
 module.exports = function (eleventyConfig) {
+  eleventyConfig.addWatchTarget("./src/css/");
   // Passthough paths
   eleventyConfig.addPassthroughCopy({ "src/static": "/" });
   eleventyConfig.addPassthroughCopy({ "src/robots.txt": "/robots.txt" });
