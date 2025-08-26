@@ -5,11 +5,11 @@
     width: min(80%, 14rem);
     margin-inline: auto;
   }
-  /* .info-two {
+  .info-two {
     p:nth-child(3) {
       color: var(--three);
     }
-  } */
+  }
   .birbs {
     margin-top: 3rem;
     margin-inline: auto;
