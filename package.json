@@ -12,7 +12,7 @@
     "watch": "eleventy --watch"
   },
   "keywords": [],
-  "author": "",
+  "author": "Green Heron Web Design",
   "license": "ISC",
   "devDependencies": {
     "@11ty/eleventy": "^3.1.2",

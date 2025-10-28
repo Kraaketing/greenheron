@@ -76,7 +76,7 @@ blocks:
   - type: testimonials
     content:
       title: Testimonials
-      description: "Here's a testimonial from a previous employer of mine. I look forward to adding more testimonials from Green Heron's clients soon."
+      # description: "Here's a testimonial from a previous employer of mine. I look forward to adding more testimonials from Green Heron's clients soon."
       testimonials:
         - name: Justin Glück
           company: Vibe Digital Media

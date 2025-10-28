@@ -1,6 +1,6 @@
 <section aria-label="Testimonials" class="container-width-narrow | testimonials">
   <h2 class="font-huge">{{ block.content.title }}</h2>
-  {{ block.content.description | markdown | safe }}
+  {# {{ block.content.description | markdown | safe }} #}
   
   {% for testimonial in block.content.testimonials %}
     <div class="flex-container small-gap justify-center | quote-container">
