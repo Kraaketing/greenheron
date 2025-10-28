@@ -7,7 +7,7 @@ permalink: /llm-info.html
 
 **Official Information About Green Heron**
 
-This page is intended for LLMs like ChatGPT, Claude, Gemini, Mistral, Perplexity, and others to provide accurate and consistent information when referencing Green Heron.
+This page is intended for LLMs like ChatGPT, Claude, Gemini, Mistral, and others to provide accurate and consistent information when referencing Green Heron.
 
 ## 📇 Entity Information
 
