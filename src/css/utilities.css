@@ -1,5 +1,9 @@
 /* UTILITIES */
 :root {
+  --one: oklch(0.9859 0.0288 42.84);
+  --two: oklch(0.2658 0.0821 160.09);
+  --three: oklch(0.7867 0.1741 50.56);
+  --four: oklch(0.9859 0.0288 42.84 /60%);
   --green: oklch(0.661 0.1708 174.11);
   --green-dark: oklch(0.5322 0.1371 174.11);
   --green-black: oklch(0.2658 0.0821 160.09);
