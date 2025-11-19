@@ -13,10 +13,10 @@ function handleScroll() {
     const scrollProgress = Math.max(0, windowHeight - containerTop) / (windowHeight + containerRect.height);
     const layers = parallaxContainer.querySelectorAll('.mountain-layer');
     
-    // Scale effect based on viewport width
+    // Reduce animation speed on smaller screens proportionally
     const viewportWidth = window.innerWidth;
     const baseMultiplier = 200;
-    const widthMultiplier = Math.max(1, viewportWidth / 1200);
+    const widthMultiplier = viewportWidth / 1200; // No Math.max, so it scales down
     
     layers.forEach(layer => {
       const speed = parseFloat(layer.dataset.speed);

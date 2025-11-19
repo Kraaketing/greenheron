@@ -82,19 +82,11 @@ blocks:
           company: Vibe Digital Media
           image: svg/no-image.njk
           paragraphs:
-            - I had the pleasure of working with Jørgen at Vibe
-              Digital. Jørgen's expertise and creative
-              flair was clear from the outset, as he crafted the initial design
-              for a major eCommerce website that our client immediately
-              approved. His designs were both visually appealing and highly
+            - Jørgen's designs were both visually appealing and highly
               functional, enhancing the user experience significantly.
             - Jørgen's iterative approach and ability to incorporate feedback
               ensured the project's success, especially on a site featuring 2000
               products. Additionally, his innovative prototype for a mobile menu
               system in Figma was a standout, demonstrating his proficiency and
               creativity in tackling usability challenges.
-            - Reliable, professional, and creative, Jørgen consistently met
-              deadlines and communicated effectively with myself and our
-              clients. His collaborative spirit made him an invaluable member of
-              the team. 
 ---
