@@ -121,6 +121,7 @@ textarea {
   font-size: clamp(1.2rem, 1rem + 1vw, 1.8rem);
 }
 
+h1,
 h2,
 h3,
 .font-big {
