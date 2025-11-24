@@ -1,6 +1,8 @@
 User-agent: *
 Allow: /
 Disallow: /admin/
+Disallow: /sent
+Disallow: /*.json$
 
 Host: https://greenheron.design
 Sitemap: https://greenheron.design/sitemap.xml
