@@ -7,13 +7,36 @@
   "description": "Sustainable web pages designed and developed with love and creativity in Portugal, for a greener web.",
   "founder": {
     "@type": "Person",
-    "name": "Jørgen N. Bjørnstad"
+    "name": "Jørgen N. Bjørnstad",
+    "jobTitle": "Web Designer & Developer"
   },
-  "areaServed": "Europe",
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "contactType": "customer service",
+    "email": "hei@greenheron.design",
+    "availableLanguage": ["English", "Norwegian"]
+  },
+  "sameAs": [
+    "https://www.linkedin.com/company/green-heron-web-design",
+    "www.linkedin.com/in/jorgennbjornstad",
+    "https://github.com/kraaketing"
+  ],
+  "areaServed": {
+    "@type": "Place",
+    "name": "Europe"
+  },
   "address": {
     "@type": "PostalAddress",
     "addressCountry": "PT"
   },
-  "serviceType": "Web Design and Development",
-  "specialty": "Sustainable Web Development"
+  "makesOffer": {
+    "@type": "Offer",
+    "itemOffered": {
+      "@type": "Service",
+      "name": "Sustainable Web Design and Development",
+      "description": "Custom-designed, low-impact websites built with minimal code and eco-friendly hosting"
+    }
+  },
+  "foundingDate": "2025",
+  "slogan": "Sustainable web design for a greener internet"
 }
