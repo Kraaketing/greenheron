@@ -1,6 +1,8 @@
 <section aria-label="Contact form" class="center container-width-narrow | contact">
   <span>Let me know how I can help you!</span>
   <form action="/submit-contact" method="POST">
+    <input type="text" name="website" style="display:none" tabindex="-1" autocomplete="off" />
+    <input type="hidden" name="timestamp" id="timestamp" />
     <label for="name">Name</label>
     <input type="text" id="name" name="name" placeholder="Type here" required />
     <label for="address">Email Address</label>
@@ -9,4 +11,7 @@
     <textarea maxlength="4000" id="message" name="message" required></textarea>
     <input type="submit" value="Send" />
   </form>
+  <script>
+    document.getElementById('timestamp').value = Date.now();
+  </script>
 </section>
